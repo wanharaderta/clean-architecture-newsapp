@@ -1,5 +1,5 @@
 //
-//  NewsRepository.swift
+//  HomeUseCase.swift
 //  NewsApp
 //
 //  Created by Wanhar on 16/02/21.
@@ -8,6 +8,8 @@
 import Foundation
 import Combine
 
-protocol ArticlesRepository: class {
+protocol HomeUseCase {
+  
   func getArticles() -> AnyPublisher<[ArticleModel], Error>
+  
 }
