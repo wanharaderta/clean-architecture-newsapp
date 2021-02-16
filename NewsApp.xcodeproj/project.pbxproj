@@ -3,19 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8372C47325DBB69D006C2577 /* ArticlesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372C47225DBB69D006C2577 /* ArticlesRepository.swift */; };
+		8372C47625DBCB39006C2577 /* ArticlesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372C47525DBCB39006C2577 /* ArticlesRepositoryImpl.swift */; };
+		8372C47C25DBCC0D006C2577 /* ArticlesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372C47B25DBCC0D006C2577 /* ArticlesResponse.swift */; };
+		8372C48525DC11AF006C2577 /* NewsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372C48425DC11AF006C2577 /* NewsApi.swift */; };
+		8372C48C25DC1669006C2577 /* CustomeError+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372C48B25DC1669006C2577 /* CustomeError+Ext.swift */; };
+		8372C49125DC186D006C2577 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372C49025DC186C006C2577 /* RemoteDataSource.swift */; };
 		8379F9FC25DADC1300921BF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8379F9FB25DADC1300921BF4 /* AppDelegate.swift */; };
 		8379F9FE25DADC1300921BF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8379F9FD25DADC1300921BF4 /* SceneDelegate.swift */; };
 		8379FA0025DADC1300921BF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8379F9FF25DADC1300921BF4 /* ContentView.swift */; };
 		8379FA0225DADC1500921BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8379FA0125DADC1500921BF4 /* Assets.xcassets */; };
 		8379FA0525DADC1500921BF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8379FA0425DADC1500921BF4 /* Preview Assets.xcassets */; };
 		8379FA0825DADC1500921BF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8379FA0625DADC1500921BF4 /* LaunchScreen.storyboard */; };
+		8379FA1A25DADDB000921BF4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8379FA1925DADDB000921BF4 /* Alamofire */; };
+		8379FA2525DADF1100921BF4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8379FA2425DADF1100921BF4 /* RealmSwift */; };
+		8379FA2725DADF1100921BF4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8379FA2625DADF1100921BF4 /* Realm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8372C47225DBB69D006C2577 /* ArticlesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesRepository.swift; sourceTree = "<group>"; };
+		8372C47525DBCB39006C2577 /* ArticlesRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesRepositoryImpl.swift; sourceTree = "<group>"; };
+		8372C47B25DBCC0D006C2577 /* ArticlesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesResponse.swift; sourceTree = "<group>"; };
+		8372C48425DC11AF006C2577 /* NewsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApi.swift; sourceTree = "<group>"; };
+		8372C48B25DC1669006C2577 /* CustomeError+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomeError+Ext.swift"; sourceTree = "<group>"; };
+		8372C49025DC186C006C2577 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		8379F9F825DADC1300921BF4 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8379F9FB25DADC1300921BF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8379F9FD25DADC1300921BF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,12 +46,100 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8379FA2725DADF1100921BF4 /* Realm in Frameworks */,
+				8379FA2525DADF1100921BF4 /* RealmSwift in Frameworks */,
+				8379FA1A25DADDB000921BF4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8372C46925DBB565006C2577 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8372C48225DC117F006C2577 /* Utils */,
+				8372C47125DBB635006C2577 /* Repository */,
+				8372C46E25DBB573006C2577 /* Remote */,
+				8372C46A25DBB56B006C2577 /* Local */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8372C46A25DBB56B006C2577 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				8372C47025DBB591006C2577 /* Entity */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		8372C46E25DBB573006C2577 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				8372C48F25DC1832006C2577 /* Datasource */,
+				8372C46F25DBB582006C2577 /* Response */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		8372C46F25DBB582006C2577 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				8372C47B25DBCC0D006C2577 /* ArticlesResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		8372C47025DBB591006C2577 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		8372C47125DBB635006C2577 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8372C47225DBB69D006C2577 /* ArticlesRepository.swift */,
+				8372C47525DBCB39006C2577 /* ArticlesRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		8372C48225DC117F006C2577 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8372C48A25DC164E006C2577 /* Extensions */,
+				8372C48325DC118D006C2577 /* Network */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8372C48325DC118D006C2577 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8372C48425DC11AF006C2577 /* NewsApi.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8372C48A25DC164E006C2577 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8372C48B25DC1669006C2577 /* CustomeError+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8372C48F25DC1832006C2577 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				8372C49025DC186C006C2577 /* RemoteDataSource.swift */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
 		8379F9EF25DADC1300921BF4 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +159,10 @@
 		8379F9FA25DADC1300921BF4 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				8379F9FB25DADC1300921BF4 /* AppDelegate.swift */,
-				8379F9FD25DADC1300921BF4 /* SceneDelegate.swift */,
-				8379F9FF25DADC1300921BF4 /* ContentView.swift */,
-				8379FA0125DADC1500921BF4 /* Assets.xcassets */,
-				8379FA0625DADC1500921BF4 /* LaunchScreen.storyboard */,
-				8379FA0925DADC1500921BF4 /* Info.plist */,
+				8379FA1325DADCDB00921BF4 /* App */,
+				8379FA1225DADCD600921BF4 /* Core */,
+				8379FA1125DADCBE00921BF4 /* Module */,
+				8379FA1025DADC9300921BF4 /* Supporting Files */,
 				8379FA0325DADC1500921BF4 /* Preview Content */,
 			);
 			path = NewsApp;
@@ -75,6 +176,73 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8379FA1025DADC9300921BF4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8379FA0125DADC1500921BF4 /* Assets.xcassets */,
+				8379FA0625DADC1500921BF4 /* LaunchScreen.storyboard */,
+				8379FA0925DADC1500921BF4 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8379FA1125DADCBE00921BF4 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				8379FA1725DADD2D00921BF4 /* Favorite */,
+				8379FA1625DADD2700921BF4 /* About */,
+				8379FA1525DADD2200921BF4 /* Detail */,
+				8379FA1425DADD1A00921BF4 /* Home */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		8379FA1225DADCD600921BF4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8372C46925DBB565006C2577 /* Data */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8379FA1325DADCDB00921BF4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8379F9FB25DADC1300921BF4 /* AppDelegate.swift */,
+				8379F9FD25DADC1300921BF4 /* SceneDelegate.swift */,
+				8379F9FF25DADC1300921BF4 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8379FA1425DADD1A00921BF4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8379FA1525DADD2200921BF4 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		8379FA1625DADD2700921BF4 /* About */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		8379FA1725DADD2D00921BF4 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,12 +253,18 @@
 				8379F9F425DADC1300921BF4 /* Sources */,
 				8379F9F525DADC1300921BF4 /* Frameworks */,
 				8379F9F625DADC1300921BF4 /* Resources */,
+				8345000525DAE4E3007F4385 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = NewsApp;
+			packageProductDependencies = (
+				8379FA1925DADDB000921BF4 /* Alamofire */,
+				8379FA2425DADF1100921BF4 /* RealmSwift */,
+				8379FA2625DADF1100921BF4 /* Realm */,
+			);
 			productName = NewsApp;
 			productReference = 8379F9F825DADC1300921BF4 /* NewsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +292,10 @@
 				Base,
 			);
 			mainGroup = 8379F9EF25DADC1300921BF4;
+			packageReferences = (
+				8379FA1825DADDB000921BF4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8379FA2325DADF1100921BF4 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 8379F9F925DADC1300921BF4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,14 +318,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8345000525DAE4E3007F4385 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then \n    swiftlint \nelse \n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8379F9F425DADC1300921BF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8372C47325DBB69D006C2577 /* ArticlesRepository.swift in Sources */,
 				8379F9FC25DADC1300921BF4 /* AppDelegate.swift in Sources */,
 				8379F9FE25DADC1300921BF4 /* SceneDelegate.swift in Sources */,
 				8379FA0025DADC1300921BF4 /* ContentView.swift in Sources */,
+				8372C49125DC186D006C2577 /* RemoteDataSource.swift in Sources */,
+				8372C47625DBCB39006C2577 /* ArticlesRepositoryImpl.swift in Sources */,
+				8372C47C25DBCC0D006C2577 /* ArticlesResponse.swift in Sources */,
+				8372C48525DC11AF006C2577 /* NewsApi.swift in Sources */,
+				8372C48C25DC1669006C2577 /* CustomeError+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +494,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NewsApp/Preview Content\"";
 				DEVELOPMENT_TEAM = UPCX9GY2XM;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = NewsApp/Info.plist;
+				INFOPLIST_FILE = "NewsApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +515,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NewsApp/Preview Content\"";
 				DEVELOPMENT_TEAM = UPCX9GY2XM;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = NewsApp/Info.plist;
+				INFOPLIST_FILE = "NewsApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,6 +549,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8379FA1825DADDB000921BF4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+		8379FA2325DADF1100921BF4 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8379FA1925DADDB000921BF4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8379FA1825DADDB000921BF4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8379FA2425DADF1100921BF4 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8379FA2325DADF1100921BF4 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		8379FA2625DADF1100921BF4 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8379FA2325DADF1100921BF4 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8379F9F025DADC1300921BF4 /* Project object */;
 }
