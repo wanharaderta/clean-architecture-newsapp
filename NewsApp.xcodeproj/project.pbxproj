@@ -21,6 +21,11 @@
 		836A365B25DD8F2500EC863D /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A365A25DD8F2500EC863D /* DetailInteractor.swift */; };
 		836A365F25DD8F3200EC863D /* DetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A365E25DD8F3200EC863D /* DetailUseCase.swift */; };
 		836A366325DD910600EC863D /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A366225DD910600EC863D /* DetailPresenter.swift */; };
+		836A366B25DDA0C800EC863D /* FavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A366A25DDA0C800EC863D /* FavoritePresenter.swift */; };
+		836A366E25DDA34900EC863D /* FavoriteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A366D25DDA34800EC863D /* FavoriteUseCase.swift */; };
+		836A367125DDA35E00EC863D /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A367025DDA35E00EC863D /* FavoriteInteractor.swift */; };
+		836A367625DDA4D900EC863D /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A367525DDA4D900EC863D /* LocaleDataSource.swift */; };
+		836A367925DDA59500EC863D /* ArticleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A367825DDA59500EC863D /* ArticleEntity.swift */; };
 		8372C47325DBB69D006C2577 /* ArticlesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372C47225DBB69D006C2577 /* ArticlesRepository.swift */; };
 		8372C47625DBCB39006C2577 /* ArticlesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372C47525DBCB39006C2577 /* ArticlesRepositoryImpl.swift */; };
 		8372C47C25DBCC0D006C2577 /* ArticlesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372C47B25DBCC0D006C2577 /* ArticlesResponse.swift */; };
@@ -58,6 +63,11 @@
 		836A365A25DD8F2500EC863D /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		836A365E25DD8F3200EC863D /* DetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCase.swift; sourceTree = "<group>"; };
 		836A366225DD910600EC863D /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		836A366A25DDA0C800EC863D /* FavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePresenter.swift; sourceTree = "<group>"; };
+		836A366D25DDA34800EC863D /* FavoriteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteUseCase.swift; sourceTree = "<group>"; };
+		836A367025DDA35E00EC863D /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
+		836A367525DDA4D900EC863D /* LocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
+		836A367825DDA59500EC863D /* ArticleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleEntity.swift; sourceTree = "<group>"; };
 		8372C47225DBB69D006C2577 /* ArticlesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesRepository.swift; sourceTree = "<group>"; };
 		8372C47525DBCB39006C2577 /* ArticlesRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesRepositoryImpl.swift; sourceTree = "<group>"; };
 		8372C47B25DBCC0D006C2577 /* ArticlesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesResponse.swift; sourceTree = "<group>"; };
@@ -130,6 +140,46 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		836A366625DDA02A00EC863D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8305CF5525DCF11C00A4E358 /* AboutView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		836A366725DDA03000EC863D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		836A366825DDA03600EC863D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				836A366A25DDA0C800EC863D /* FavoritePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		836A366925DDA04D00EC863D /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				836A366D25DDA34800EC863D /* FavoriteUseCase.swift */,
+				836A367025DDA35E00EC863D /* FavoriteInteractor.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		836A367425DDA4C000EC863D /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				836A367525DDA4D900EC863D /* LocaleDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		8372C46925DBB565006C2577 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +193,7 @@
 		8372C46A25DBB56B006C2577 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				836A367425DDA4C000EC863D /* DataSource */,
 				8372C47025DBB591006C2577 /* Entity */,
 			);
 			path = Local;
@@ -168,6 +219,7 @@
 		8372C47025DBB591006C2577 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				836A367825DDA59500EC863D /* ArticleEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -237,6 +289,7 @@
 		8372C49525DC1CF8006C2577 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				836A366925DDA04D00EC863D /* Favorite */,
 				836A365925DD8EE400EC863D /* Detail */,
 				8372C4A325DC2220006C2577 /* Home */,
 			);
@@ -385,7 +438,9 @@
 		8379FA1625DADD2700921BF4 /* About */ = {
 			isa = PBXGroup;
 			children = (
-				8305CF5525DCF11C00A4E358 /* AboutView.swift */,
+				836A366825DDA03600EC863D /* Presenter */,
+				836A366725DDA03000EC863D /* Router */,
+				836A366625DDA02A00EC863D /* View */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -504,15 +559,19 @@
 				8372C49B25DC1D2E006C2577 /* HomeInteractor.swift in Sources */,
 				836A365F25DD8F3200EC863D /* DetailUseCase.swift in Sources */,
 				8379F9FC25DADC1300921BF4 /* AppDelegate.swift in Sources */,
+				836A367925DDA59500EC863D /* ArticleEntity.swift in Sources */,
 				8372C49F25DC1EFE006C2577 /* ArticleMapper.swift in Sources */,
 				8372C4B225DC244C006C2577 /* HomeRouter.swift in Sources */,
 				836A364B25DD54F800EC863D /* DetailView.swift in Sources */,
 				836A364E25DD562000EC863D /* Constants.swift in Sources */,
 				8305CF5625DCF11C00A4E358 /* AboutView.swift in Sources */,
 				836A365225DD568300EC863D /* CustomShape.swift in Sources */,
+				836A367125DDA35E00EC863D /* FavoriteInteractor.swift in Sources */,
 				8305CF4B25DCD99700A4E358 /* HomeView.swift in Sources */,
+				836A367625DDA4D900EC863D /* LocaleDataSource.swift in Sources */,
 				8379F9FE25DADC1300921BF4 /* SceneDelegate.swift in Sources */,
 				8379FA0025DADC1300921BF4 /* ContentView.swift in Sources */,
+				836A366E25DDA34900EC863D /* FavoriteUseCase.swift in Sources */,
 				8372C49125DC186D006C2577 /* RemoteDataSource.swift in Sources */,
 				8372C4AE25DC23D5006C2577 /* HomePresenter.swift in Sources */,
 				8372C47625DBCB39006C2577 /* ArticlesRepositoryImpl.swift in Sources */,
@@ -523,6 +582,7 @@
 				8305CF5C25DD27D700A4E358 /* ArticleRow.swift in Sources */,
 				8372C48525DC11AF006C2577 /* NewsApi.swift in Sources */,
 				8305CF4825DCCCE100A4E358 /* Injection.swift in Sources */,
+				836A366B25DDA0C800EC863D /* FavoritePresenter.swift in Sources */,
 				836A365B25DD8F2500EC863D /* DetailInteractor.swift in Sources */,
 				8305CF4F25DCDA7A00A4E358 /* CustomTabView.swift in Sources */,
 				8372C48C25DC1669006C2577 /* CustomeError+Ext.swift in Sources */,

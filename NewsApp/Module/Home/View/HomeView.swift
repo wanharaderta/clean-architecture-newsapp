@@ -74,9 +74,9 @@ struct HomeView: View {
         }.padding()
       })
     }
-    .sheet(isPresented: $showingDetail, content: {
-      self.presenter.linkBuilder(for: articleSelected, content: Content)
-    })
+//    .sheet(isPresented: $showingDetail, content: {
+//      self.presenter.linkBuilder(for: articleSelected, content: Content)
+//    })
   }
   
 }

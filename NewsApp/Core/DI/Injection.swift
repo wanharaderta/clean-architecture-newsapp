@@ -28,4 +28,9 @@ final class Injection: NSObject {
     return DetailInteractor(repository: repository,article: article)
   }
   
+  func provideFavorite(article: ArticleModel) -> DetailUseCase {
+    let repository = provideRepository()
+    return DetailInteractor(repository: repository,article: article)
+  }
+  
 }

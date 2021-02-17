@@ -16,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              options connectionOptions: UIScene.ConnectionOptions) {
     
     let homeUseCase = Injection.init().provideHome()
+    let favoriteUseCase = Injection.init().provideHome()
 
     let homePresenter = HomePresenter(useCase: homeUseCase)
 

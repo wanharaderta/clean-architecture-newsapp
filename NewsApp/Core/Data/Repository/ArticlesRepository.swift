@@ -11,5 +11,6 @@ import Combine
 protocol ArticlesRepository: class {
   
   func getArticles() -> AnyPublisher<[ArticleModel], Error>
+  func getFavoriteArticles() -> AnyPublisher<[ArticleModel], Error>
   
 }

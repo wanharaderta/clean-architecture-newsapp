@@ -11,16 +11,18 @@ import Combine
 
 final class ArticlesRepositoryImpl: NSObject {
   
-  typealias ArticlesInstance = (RemoteDataSource) -> ArticlesRepositoryImpl
+  typealias ArticlesInstance = (RemoteDataSource,LocaleDataSource) -> ArticlesRepositoryImpl
   
   fileprivate let remote: RemoteDataSource
+  fileprivate let locale: LocaleDataSource
   
-  private init(remote: RemoteDataSource){
+  private init(remote: RemoteDataSource, locale:LocaleDataSource){
     self.remote = remote
+    self.locale = locale
   }
   
-  static let instance: ArticlesInstance = { remoteRepositoy in
-    return ArticlesRepositoryImpl(remote: remoteRepositoy)
+  static let instance: ArticlesInstance = { remoteRepositoy, localeRepository in
+    return ArticlesRepositoryImpl(remote: remoteRepositoy, locale: localeRepository)
   }
   
 }
@@ -31,6 +33,11 @@ extension ArticlesRepositoryImpl: ArticlesRepository {
     return self.remote.getArticles()
       .map { ArticleMapper.mapArticleResponseToDomain(input: $0) }
       .eraseToAnyPublisher()
+  }
+  
+  func getFavoriteArticles() -> AnyPublisher<[ArticleModel], Error> {
+    return self.locale.getFavoriteArticles()
+      
   }
   
 }
