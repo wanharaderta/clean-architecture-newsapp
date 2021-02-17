@@ -15,7 +15,7 @@ final class ArticleMapper {
     
     return articleResponse.map { result in
       return ArticleModel(
-        id: UUID(),
+        id: result.id,
         author: result.author ?? "",
         sourceName: result.source?.name ?? "",
         title: result.title ?? "",

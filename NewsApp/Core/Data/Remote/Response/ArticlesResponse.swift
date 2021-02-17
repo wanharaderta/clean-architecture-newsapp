@@ -10,11 +10,14 @@ import Foundation
 struct ArticlesResponse: Decodable {
   
   let articles: [ArticleResponse]
-
+  
+  private enum CodingKeys: String, CodingKey {
+    case articles
+  }
 }
 
 struct ArticleResponse: Decodable {
-  
+  var id =          UUID().uuidString
   let source:       Source?
   let author:       String?
   let title:        String?

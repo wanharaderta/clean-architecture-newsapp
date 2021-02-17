@@ -9,5 +9,7 @@ import Foundation
 import Combine
 
 protocol ArticlesRepository: class {
+  
   func getArticles() -> AnyPublisher<[ArticleModel], Error>
+  
 }

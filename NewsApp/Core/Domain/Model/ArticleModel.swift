@@ -9,7 +9,7 @@ import Foundation
 
 struct ArticleModel: Equatable, Identifiable {
   
-  let id: UUID
+  let id: String
   let author: String
   let sourceName: String
   let title: String

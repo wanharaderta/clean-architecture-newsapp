@@ -5,7 +5,7 @@
 //  Created by Wanhar on 16/02/21.
 //
 
-import Foundation
+import SwiftUI
 import Combine
 
 class HomePresenter: ObservableObject {
@@ -36,5 +36,12 @@ class HomePresenter: ObservableObject {
       }, receiveValue: { articles in
         self.articles = articles
       }).store(in: &cancellables)
+  }
+  
+  func linkBuilder<Content: View>(
+    for article: ArticleModel,
+    @ViewBuilder content: () -> Content
+  ) -> some View {
+    NavigationLink (destination: router.makeDetailView(for: article)) { content() }
   }
 }
