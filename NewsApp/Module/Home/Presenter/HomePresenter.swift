@@ -16,10 +16,12 @@ class HomePresenter: ObservableObject {
   
   @Published var articles: [ArticleModel] = []
   @Published var errorMessage: String = ""
+  @Published var currentDate: String = ""
   @Published var isLoading: Bool = false
   
   init(useCase: HomeUseCase) {
     self.homeUsecase = useCase
+    getCurrentDate()
   }
   
   func getArticles() {
@@ -38,10 +40,15 @@ class HomePresenter: ObservableObject {
       }).store(in: &cancellables)
   }
   
-  func linkBuilder<Content: View>(
-    for article: ArticleModel,
-    @ViewBuilder content: () -> Content
+  func getCurrentDate() {
+    let date = Date()
+    let dateString = date.getFormattedDate(format: "dd MMMM, yyyy")
+    currentDate = dateString
+  }
+  
+  func linkBuilder(
+      for article: ArticleModel
   ) -> some View {
-    NavigationLink (destination: router.makeDetailView(for: article)) { content() }
+      return router.makeDetailView(for: article)
   }
 }

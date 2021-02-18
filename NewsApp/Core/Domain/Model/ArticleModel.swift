@@ -16,4 +16,5 @@ struct ArticleModel: Equatable, Identifiable {
   let urlToImage: String
   let content: String
   let description: String
+  var favorite: Bool = false
 }

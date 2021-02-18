@@ -19,7 +19,7 @@ struct ArticleRow: View {
         .transition(.fade(duration: 0.5))
         .cornerRadius(10)
         .scaleEffect()
-        .frame(width: 110, height: 100)
+        .frame(width: 105, height: 100)
       VStack {
         Text(item.title)
           .font(.system(size: 15))
@@ -33,7 +33,7 @@ struct ArticleRow: View {
           .foregroundColor(Color.gray.opacity(1))
         
         HStack {
-          Text(item.author)
+          Text(item.sourceName)
             .font(.caption)
             .foregroundColor(Color.blue)
             .padding(.top, 5)

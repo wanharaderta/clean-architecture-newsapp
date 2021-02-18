@@ -28,7 +28,6 @@ final class ArticlesRepositoryImpl: NSObject {
 }
 
 extension ArticlesRepositoryImpl: ArticlesRepository {
-  
   func getArticles() -> AnyPublisher<[ArticleModel], Error> {
     return self.remote.getArticles()
       .map { ArticleMapper.mapArticleResponseToDomain(input: $0) }
@@ -37,7 +36,20 @@ extension ArticlesRepositoryImpl: ArticlesRepository {
   
   func getFavoriteArticles() -> AnyPublisher<[ArticleModel], Error> {
     return self.locale.getFavoriteArticles()
-      
+      .map { ArticleMapper.mapArticleEntitiesToDomain(input: $0) }
+      .eraseToAnyPublisher()
+  }
+  
+  func getArticle(by idArticle: String) -> AnyPublisher<ArticleModel, Error> {
+    return self.locale.getArticle(by: idArticle)
+      .map { ArticleMapper.mapArticleEntityToDomain(input: $0) }
+      .eraseToAnyPublisher()
+  }
+  
+  func updateFavoriteArticle(by idArticle: String) -> AnyPublisher<ArticleModel, Error> {
+    return self.locale.updateFavoriteArticle(by: idArticle)
+      .map { ArticleMapper.mapArticleEntityToDomain(input: $0) }
+      .eraseToAnyPublisher()
   }
   
 }

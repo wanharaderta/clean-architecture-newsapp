@@ -14,8 +14,9 @@ final class Injection: NSObject {
     let ream = try? Realm()
     
     let remote: RemoteDataSource = RemoteDataSource.instance
+    let locale: LocaleDataSource = LocaleDataSource.instance(ream)
     
-    return ArticlesRepositoryImpl.instance(remote)
+    return ArticlesRepositoryImpl.instance(remote,locale)
   }
   
   func provideHome() -> HomeUseCase {
@@ -28,9 +29,9 @@ final class Injection: NSObject {
     return DetailInteractor(repository: repository,article: article)
   }
   
-  func provideFavorite(article: ArticleModel) -> DetailUseCase {
+  func provideFavorite(article: ArticleModel) -> FavoriteUseCase {
     let repository = provideRepository()
-    return DetailInteractor(repository: repository,article: article)
+    return FavoriteInteractor(repository: repository)
   }
   
 }

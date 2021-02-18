@@ -11,19 +11,19 @@ struct ContentView: View {
   
   @EnvironmentObject var homePresenter: HomePresenter
   
-    var body: some View {
-      NavigationView {
-        
-        CustomTabView(presenter: homePresenter)
-          .navigationTitle("")
-          .navigationBarTitleDisplayMode(.inline)
-          .navigationBarHidden(true)
-      }
+  var body: some View {
+    NavigationView {
+      
+      CustomTabView(homePresenter: homePresenter)
+        .navigationTitle("")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true)
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }

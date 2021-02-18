@@ -10,12 +10,10 @@ import SwiftUI
 struct HomeView: View {
   
   @ObservedObject var presenter: HomePresenter
-  @State var articleSelected : ArticleModel? = nil
-  @State var showingDetail = false
+  @State private var articleSelected: ArticleModel? = nil
   @State var querySearch = ""
-  
   var body: some View {
-    VStack {
+    return VStack {
       HStack {
         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
           Image("filter")
@@ -25,7 +23,7 @@ struct HomeView: View {
         })
         
         Spacer(minLength: 0)
-        Text("17 Februari,2021")
+        Text(self.presenter.currentDate)
           .font(.body)
           .foregroundColor(.gray)
       }.padding()
@@ -53,14 +51,11 @@ struct HomeView: View {
                 VStack {
                   Text("Loading...")
                   ActivityIndicator()
-                  
                 }
               } else {
-                ForEach(self.presenter.articles, id: \.id) { article in
-                  ArticleRow(item: article).onTapGesture {
-                    self.articleSelected = article
-                    self.showingDetail.toggle()
-                    print("wwww,\(articleSelected)")
+                ForEach(self.presenter.articles, id: \.id) { item in
+                  ArticleRow(item: item).onTapGesture {
+                    self.articleSelected = item
                   }
                 }
               }
@@ -73,10 +68,8 @@ struct HomeView: View {
           }
         }.padding()
       })
+    }.sheet(item: $articleSelected) { item in
+      self.presenter.linkBuilder(for: item)
     }
-//    .sheet(isPresented: $showingDetail, content: {
-//      self.presenter.linkBuilder(for: articleSelected, content: Content)
-//    })
   }
-  
 }

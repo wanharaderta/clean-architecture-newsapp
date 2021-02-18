@@ -8,7 +8,7 @@
 import Foundation
 
 struct API {
-  static let baseUrl = "http://newsapi.org/v2/top-headlines?country=id"
+  static let baseUrl = "https://newsapi.org/v2/top-headlines?country=id"
 }
 
 protocol Endpoint {
@@ -20,7 +20,7 @@ enum Endpoints {
     case news
     public var url: String {
       switch self {
-      case .news: return "\(API.baseUrl)&category=technology&apiKey=5dab24aff4f14b57b567608a51f8c256"
+      case .news: return "\(API.baseUrl)&category=technology&apiKey=74231bbed0db4b088bf4b82599488bb2"
       }
     }
   }

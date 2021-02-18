@@ -9,6 +9,6 @@ import Combine
 
 protocol FavoriteUseCase {
   
-  func getArticles() -> AnyPublisher<[ArticleModel], Error>
+  func getFavoriteArticle() -> AnyPublisher<[ArticleModel], Error>
   
 }

@@ -9,17 +9,16 @@ import SwiftUI
 
 struct CustomTabView: View {
   
- 
   var tabs = ["home", "favorite", "about"]
   
-  var presenter: HomePresenter
+  var homePresenter: HomePresenter
+  
   @State var selectedtab = "home"
   @State var edge = UIApplication.shared.windows.first?.safeAreaInsets
-  
   var body: some View {
     ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
       TabView(selection: $selectedtab) {
-        HomeView(presenter: presenter)
+        HomeView(presenter: homePresenter)
           .tag("home")
         FavoriteView()
           .tag("favorite")
@@ -38,7 +37,6 @@ struct CustomTabView: View {
         }
       }
       .padding(.horizontal, 25)
-      .padding(.vertical, 1)
       .background(Color.white)
       .clipShape(Capsule())
       .shadow(color: Color.black.opacity(0.15), radius: 5, x: 5, y: 5)

@@ -47,6 +47,8 @@
 		8379FA1A25DADDB000921BF4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8379FA1925DADDB000921BF4 /* Alamofire */; };
 		8379FA2525DADF1100921BF4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8379FA2425DADF1100921BF4 /* RealmSwift */; };
 		8379FA2725DADF1100921BF4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8379FA2625DADF1100921BF4 /* Realm */; };
+		83E5B8E025DE2BA300438CF3 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5B8DF25DE2BA300438CF3 /* Array+Ext.swift */; };
+		83E5B8E625DE3E3A00438CF3 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5B8E525DE3E3A00438CF3 /* Date+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		8379FA0425DADC1500921BF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8379FA0725DADC1500921BF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8379FA0925DADC1500921BF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83E5B8DF25DE2BA300438CF3 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
+		83E5B8E525DE3E3A00438CF3 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				8372C48B25DC1669006C2577 /* CustomeError+Ext.swift */,
+				83E5B8DF25DE2BA300438CF3 /* Array+Ext.swift */,
+				83E5B8E525DE3E3A00438CF3 /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -438,7 +444,6 @@
 		8379FA1625DADD2700921BF4 /* About */ = {
 			isa = PBXGroup;
 			children = (
-				836A366825DDA03600EC863D /* Presenter */,
 				836A366725DDA03000EC863D /* Router */,
 				836A366625DDA02A00EC863D /* View */,
 			);
@@ -448,6 +453,7 @@
 		8379FA1725DADD2D00921BF4 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				836A366825DDA03600EC863D /* Presenter */,
 				8305CF5225DCF0BC00A4E358 /* FavoriteView.swift */,
 			);
 			path = Favorite;
@@ -558,6 +564,7 @@
 				8372C47325DBB69D006C2577 /* ArticlesRepository.swift in Sources */,
 				8372C49B25DC1D2E006C2577 /* HomeInteractor.swift in Sources */,
 				836A365F25DD8F3200EC863D /* DetailUseCase.swift in Sources */,
+				83E5B8E025DE2BA300438CF3 /* Array+Ext.swift in Sources */,
 				8379F9FC25DADC1300921BF4 /* AppDelegate.swift in Sources */,
 				836A367925DDA59500EC863D /* ArticleEntity.swift in Sources */,
 				8372C49F25DC1EFE006C2577 /* ArticleMapper.swift in Sources */,
@@ -573,6 +580,7 @@
 				8379FA0025DADC1300921BF4 /* ContentView.swift in Sources */,
 				836A366E25DDA34900EC863D /* FavoriteUseCase.swift in Sources */,
 				8372C49125DC186D006C2577 /* RemoteDataSource.swift in Sources */,
+				83E5B8E625DE3E3A00438CF3 /* Date+Ext.swift in Sources */,
 				8372C4AE25DC23D5006C2577 /* HomePresenter.swift in Sources */,
 				8372C47625DBCB39006C2577 /* ArticlesRepositoryImpl.swift in Sources */,
 				8372C49825DC1D1A006C2577 /* ArticleModel.swift in Sources */,
