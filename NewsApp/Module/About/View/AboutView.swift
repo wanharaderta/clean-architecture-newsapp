@@ -29,14 +29,15 @@ struct AboutView: View {
               Spacer()
               WebImage(url: URL(string: PHOTO))
                 .resizable()
-                .renderingMode(.original)
+                .placeholder(Image(systemName: "photo"))
+                .indicator(.activity)
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150, height: 150)
                 .clipped()
                 .cornerRadius(150)
                 .shadow(radius: 10)
               Spacer()
-            }.padding(.top, 30)
+            }
             
             ZStack {
               VStack {
@@ -53,7 +54,7 @@ struct AboutView: View {
                   }
                   Divider()
                 }.padding(.bottom, 15)
-
+                
                 VStack(alignment: .leading) {
                   Text("Email").font(.headline).fontWeight(.light).foregroundColor(Color.init(.label).opacity(0.75))
                   HStack {
@@ -64,12 +65,12 @@ struct AboutView: View {
                       TextField("Enter Your Email", text: self.$presenter.email)
                         .disabled(true)
                     }
-
+                    
                   }
-
+                  
                   Divider()
                 }.padding(.bottom, 15)
-
+                
                 Button(action: {
                   if isEditing {
                     self.presenter.setProfile()
@@ -77,7 +78,7 @@ struct AboutView: View {
                     self.presenter.getProfile()
                   }
                   self.isEditing.toggle()
-                }) {
+                }){
                   if isEditing {
                     Text("Save").foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 120).padding()
                   } else {

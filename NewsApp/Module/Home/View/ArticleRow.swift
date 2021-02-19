@@ -19,7 +19,7 @@ struct ArticleRow: View {
         .transition(.fade(duration: 0.5))
         .cornerRadius(10)
         .scaleEffect()
-        .frame(width: 105, height: 100)
+        .frame(width: 110, height: 100)
       VStack {
         Text(item.title)
           .font(.system(size: 15))

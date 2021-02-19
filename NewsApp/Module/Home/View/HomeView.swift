@@ -11,11 +11,14 @@ struct HomeView: View {
   
   @ObservedObject var presenter: HomePresenter
   @State private var articleSelected: ArticleModel? = nil
+  @State private var showingAlert = false
   @State var querySearch = ""
   var body: some View {
     return VStack {
       HStack {
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+        Button(action: {
+          showingAlert.toggle()
+        }, label: {
           Image("filter")
             .resizable()
             .renderingMode(.original)
@@ -37,12 +40,12 @@ struct HomeView: View {
           
           HStack(spacing: 15, content: {
             Image(systemName: "magnifyingglass")
-              .foregroundColor(.gray)
+              .foregroundColor(Color(.systemGray3))
             TextField("Search for topics, sources", text: $querySearch)
           })
           .padding(10)
           .padding(.horizontal)
-          .background(Color.white)
+          .background(Color(.systemGray6))
           .clipShape(Capsule())
           
           ZStack {
@@ -71,5 +74,12 @@ struct HomeView: View {
     }.sheet(item: $articleSelected) { item in
       self.presenter.linkBuilder(for: item)
     }
+    .alert(isPresented: $showingAlert) {
+      Alert(
+        title: Text("Filter"),
+        message: Text("Filter not available"),
+        dismissButton: .default(Text("OK"))
+      )
+    }.background(Color.white)
   }
 }
