@@ -7,7 +7,7 @@
 
 import Foundation
 
-let PHOTO : String = "https://d17ivq9b7rppb3.cloudfront.net/small/avatar/20181007223657159d97f889e9370fe0ae41c4510747fc.jpg"
+let PHOTO : String = "https://d17ivq9b7rppb3.cloudfront.net/small/avatar/20200715114221e8124cb5b0185ee5115b360e20f3bfac.png"
 let NAME = "name"
 let EMAIL = "email"
 
@@ -18,5 +18,5 @@ let ARTICLEDUMMY: ArticleModel = ArticleModel(
   title: "News",
   urlToImage: PHOTO,
   content: "Lorem example",
-  description: "Lorem example"
+  description: "Lorem example", favorite: true
 )

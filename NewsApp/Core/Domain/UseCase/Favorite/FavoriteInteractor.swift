@@ -16,6 +16,6 @@ class FavoriteInteractor: FavoriteUseCase {
   }
   
   func getFavoriteArticle() -> AnyPublisher<[ArticleModel], Error> {
-    return repository.getArticles()
+    return repository.getFavoriteArticles()
   }
 }

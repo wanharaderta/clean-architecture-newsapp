@@ -16,11 +16,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              options connectionOptions: UIScene.ConnectionOptions) {
     
     let homeUseCase = Injection.init().provideHome()
+    let favoriteUseCase = Injection.init().provideFavorite()
 
     let homePresenter = HomePresenter(useCase: homeUseCase)
+    let favoritePresenter = FavoritePresenter(useCase: favoriteUseCase)
+    let aboutPresenter = AboutPresenter()
     
     let contentView = ContentView()
       .environmentObject(homePresenter)
+      .environmentObject(favoritePresenter)
+      .environmentObject(aboutPresenter)
     
     // Use a UIHostingController as window root view controller.
     if let windowScene = scene as? UIWindowScene {

@@ -10,14 +10,19 @@ import SwiftUI
 struct ContentView: View {
   
   @EnvironmentObject var homePresenter: HomePresenter
+  @EnvironmentObject var favoritePresenter: FavoritePresenter
+  @EnvironmentObject var aboutPresenter: AboutPresenter
   
   var body: some View {
     NavigationView {
       
-      CustomTabView(homePresenter: homePresenter)
-        .navigationTitle("")
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarHidden(true)
+      CustomTabView(
+        homePresenter: homePresenter,
+        favoritePresenter: favoritePresenter,
+        aboutPresenter: aboutPresenter)
+      .navigationTitle("")
+      .navigationBarTitleDisplayMode(.inline)
+      .navigationBarHidden(true)
     }
   }
 }

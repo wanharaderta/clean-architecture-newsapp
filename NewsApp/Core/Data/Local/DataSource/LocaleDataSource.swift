@@ -8,12 +8,12 @@ import Foundation
 import Combine
 import RealmSwift
 
-
 protocol LocaleDataSourceProtocol {
   
   func getFavoriteArticles() -> AnyPublisher<[ArticleEntity], Error>
-  func updateFavoriteArticle(by idArticle:String) -> AnyPublisher<ArticleEntity, Error>
-  func getArticle(by idArticle: String) -> AnyPublisher<ArticleEntity, Error>
+  func updateFavoriteArticle(by title: String) -> AnyPublisher<ArticleEntity, Error>
+  func getArticle(by title: String) -> AnyPublisher<ArticleEntity, Error>
+  func addFavoriteArticle(from  article: ArticleEntity) -> AnyPublisher<Bool, Error>
 }
 
 final class LocaleDataSource: NSObject {
@@ -32,13 +32,13 @@ final class LocaleDataSource: NSObject {
 extension LocaleDataSource: LocaleDataSourceProtocol {
   
   func getArticle(
-    by idArticle: String
+    by title: String
   ) -> AnyPublisher<ArticleEntity, Error> {
     return Future<ArticleEntity, Error> { completion in
       if let realm = self.realm {
         let articles: Results<ArticleEntity> = {
           realm.objects(ArticleEntity.self)
-            .filter("id = '\(idArticle)'")
+            .filter("title = '\(title)'")
         }()
         
         guard let article = articles.first else {
@@ -69,13 +69,33 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
   func updateFavoriteArticle(by idArticle: String) -> AnyPublisher<ArticleEntity, Error> {
     return Future<ArticleEntity, Error> { completion in
       if let realm = self.realm, let articleEntity = {
-        realm.objects(ArticleEntity.self).filter("id = \(idArticle)")
+        realm.objects(ArticleEntity.self).filter("idArticle = '\(idArticle)'")
       }().first {
         do {
           try realm.write {
-            articleEntity.setValue(articleEntity.favorite, forKey: "favorite")
+            articleEntity.setValue(!articleEntity.favorite, forKey: "favorite")
           }
           completion(.success(articleEntity))
+        } catch {
+          completion(.failure(DatabaseError.requestFailed))
+        }
+      } else {
+        completion(.failure(DatabaseError.invalidInstance))
+      }
+    }.eraseToAnyPublisher()
+  }
+  
+  func addFavoriteArticle(
+    from article: ArticleEntity
+  ) -> AnyPublisher<Bool, Error> {
+    return Future<Bool, Error> { completion in
+      if let realm = self.realm {
+        do {
+          try realm.write {
+            article.favorite = true
+            realm.add(article)
+            completion(.success(true))
+          }
         } catch {
           completion(.failure(DatabaseError.requestFailed))
         }

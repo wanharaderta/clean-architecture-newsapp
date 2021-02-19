@@ -33,9 +33,7 @@ struct DetailView: View {
               .padding(.top, 25)
               Spacer()
               if self.presenter.article.favorite {
-                Button(action: {
-                  // self.viewModel.deleteGame(id: self.viewModel.gameDetail.id)
-                }) {
+                Button(action: { self.presenter.updateFavorite() }) {
                   Image(systemName: "suit.heart.fill")
                     .foregroundColor(.red)
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 12)
@@ -44,7 +42,7 @@ struct DetailView: View {
                 .padding(.top, 40)
                 .padding(.trailing, 10)
               } else {
-                Button(action: {}) {
+                Button(action: { self.presenter.addfavorite() }) {
                   Image(systemName: "suit.heart")
                     .foregroundColor(.red)
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 12)
@@ -109,7 +107,10 @@ struct DetailView: View {
         }
       }
       Spacer()
-    }.edgesIgnoringSafeArea(.all)
+    }.onAppear {
+      self.presenter.getArticle()
+    }
+    .edgesIgnoringSafeArea(.all)
     .statusBar(hidden: true)
     .animation(.default)
     .navigationBarHidden(true)

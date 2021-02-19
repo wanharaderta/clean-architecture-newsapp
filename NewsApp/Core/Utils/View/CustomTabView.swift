@@ -12,6 +12,8 @@ struct CustomTabView: View {
   var tabs = ["home", "favorite", "about"]
   
   var homePresenter: HomePresenter
+  var favoritePresenter: FavoritePresenter
+  var aboutPresenter: AboutPresenter
   
   @State var selectedtab = "home"
   @State var edge = UIApplication.shared.windows.first?.safeAreaInsets
@@ -20,9 +22,9 @@ struct CustomTabView: View {
       TabView(selection: $selectedtab) {
         HomeView(presenter: homePresenter)
           .tag("home")
-        FavoriteView()
+        FavoriteView(presenter: favoritePresenter)
           .tag("favorite")
-        AboutView()
+        AboutView(presenter: aboutPresenter)
           .tag("about")
       }
       .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
@@ -53,7 +55,6 @@ struct TabButton: View {
   
   var image: String
   @Binding var selectedTab: String
-  
   var body: some View {
     Button(action: {selectedTab = image}, label: {
       Image(image)

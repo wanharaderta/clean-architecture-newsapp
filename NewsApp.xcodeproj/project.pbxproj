@@ -26,6 +26,8 @@
 		836A367125DDA35E00EC863D /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A367025DDA35E00EC863D /* FavoriteInteractor.swift */; };
 		836A367625DDA4D900EC863D /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A367525DDA4D900EC863D /* LocaleDataSource.swift */; };
 		836A367925DDA59500EC863D /* ArticleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A367825DDA59500EC863D /* ArticleEntity.swift */; };
+		836E3D9125DF698B00DD9424 /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 836E3D9025DF698B00DD9424 /* SwiftUIRefresh */; };
+		836E3D9625DF740F00DD9424 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E3D9525DF740F00DD9424 /* AboutPresenter.swift */; };
 		8372C47325DBB69D006C2577 /* ArticlesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372C47225DBB69D006C2577 /* ArticlesRepository.swift */; };
 		8372C47625DBCB39006C2577 /* ArticlesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372C47525DBCB39006C2577 /* ArticlesRepositoryImpl.swift */; };
 		8372C47C25DBCC0D006C2577 /* ArticlesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372C47B25DBCC0D006C2577 /* ArticlesResponse.swift */; };
@@ -49,6 +51,8 @@
 		8379FA2725DADF1100921BF4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8379FA2625DADF1100921BF4 /* Realm */; };
 		83E5B8E025DE2BA300438CF3 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5B8DF25DE2BA300438CF3 /* Array+Ext.swift */; };
 		83E5B8E625DE3E3A00438CF3 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5B8E525DE3E3A00438CF3 /* Date+Ext.swift */; };
+		83E5B8F725DED2C100438CF3 /* FavoriteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5B8F625DED2C100438CF3 /* FavoriteRow.swift */; };
+		83E5B8FC25DED48700438CF3 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5B8FB25DED48700438CF3 /* FavoriteRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +74,7 @@
 		836A367025DDA35E00EC863D /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
 		836A367525DDA4D900EC863D /* LocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
 		836A367825DDA59500EC863D /* ArticleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleEntity.swift; sourceTree = "<group>"; };
+		836E3D9525DF740F00DD9424 /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
 		8372C47225DBB69D006C2577 /* ArticlesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesRepository.swift; sourceTree = "<group>"; };
 		8372C47525DBCB39006C2577 /* ArticlesRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesRepositoryImpl.swift; sourceTree = "<group>"; };
 		8372C47B25DBCC0D006C2577 /* ArticlesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesResponse.swift; sourceTree = "<group>"; };
@@ -92,6 +97,8 @@
 		8379FA0925DADC1500921BF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83E5B8DF25DE2BA300438CF3 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		83E5B8E525DE3E3A00438CF3 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		83E5B8F625DED2C100438CF3 /* FavoriteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRow.swift; sourceTree = "<group>"; };
+		83E5B8FB25DED48700438CF3 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836E3D9125DF698B00DD9424 /* SwiftUIRefresh in Frameworks */,
 				8305CF6425DD2D5D00A4E358 /* SDWebImageSwiftUI in Frameworks */,
 				8379FA2725DADF1100921BF4 /* Realm in Frameworks */,
 				8379FA2525DADF1100921BF4 /* RealmSwift in Frameworks */,
@@ -152,13 +160,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		836A366725DDA03000EC863D /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
 		836A366825DDA03600EC863D /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +183,14 @@
 				836A367525DDA4D900EC863D /* LocaleDataSource.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		836E3D9425DF73FF00DD9424 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				836E3D9525DF740F00DD9424 /* AboutPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		8372C46925DBB565006C2577 /* Data */ = {
@@ -444,7 +453,7 @@
 		8379FA1625DADD2700921BF4 /* About */ = {
 			isa = PBXGroup;
 			children = (
-				836A366725DDA03000EC863D /* Router */,
+				836E3D9425DF73FF00DD9424 /* Presenter */,
 				836A366625DDA02A00EC863D /* View */,
 			);
 			path = About;
@@ -453,10 +462,28 @@
 		8379FA1725DADD2D00921BF4 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				83E5B8FA25DED46800438CF3 /* Router */,
+				83E5B8F525DED2AD00438CF3 /* View */,
 				836A366825DDA03600EC863D /* Presenter */,
-				8305CF5225DCF0BC00A4E358 /* FavoriteView.swift */,
 			);
 			path = Favorite;
+			sourceTree = "<group>";
+		};
+		83E5B8F525DED2AD00438CF3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8305CF5225DCF0BC00A4E358 /* FavoriteView.swift */,
+				83E5B8F625DED2C100438CF3 /* FavoriteRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		83E5B8FA25DED46800438CF3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				83E5B8FB25DED48700438CF3 /* FavoriteRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +508,7 @@
 				8379FA2425DADF1100921BF4 /* RealmSwift */,
 				8379FA2625DADF1100921BF4 /* Realm */,
 				8305CF6325DD2D5D00A4E358 /* SDWebImageSwiftUI */,
+				836E3D9025DF698B00DD9424 /* SwiftUIRefresh */,
 			);
 			productName = NewsApp;
 			productReference = 8379F9F825DADC1300921BF4 /* NewsApp.app */;
@@ -513,6 +541,7 @@
 				8379FA1825DADDB000921BF4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				8379FA2325DADF1100921BF4 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				8305CF6225DD2D5D00A4E358 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				836E3D8F25DF698B00DD9424 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
 			);
 			productRefGroup = 8379F9F925DADC1300921BF4 /* Products */;
 			projectDirPath = "";
@@ -569,6 +598,7 @@
 				836A367925DDA59500EC863D /* ArticleEntity.swift in Sources */,
 				8372C49F25DC1EFE006C2577 /* ArticleMapper.swift in Sources */,
 				8372C4B225DC244C006C2577 /* HomeRouter.swift in Sources */,
+				836E3D9625DF740F00DD9424 /* AboutPresenter.swift in Sources */,
 				836A364B25DD54F800EC863D /* DetailView.swift in Sources */,
 				836A364E25DD562000EC863D /* Constants.swift in Sources */,
 				8305CF5625DCF11C00A4E358 /* AboutView.swift in Sources */,
@@ -593,6 +623,8 @@
 				836A366B25DDA0C800EC863D /* FavoritePresenter.swift in Sources */,
 				836A365B25DD8F2500EC863D /* DetailInteractor.swift in Sources */,
 				8305CF4F25DCDA7A00A4E358 /* CustomTabView.swift in Sources */,
+				83E5B8FC25DED48700438CF3 /* FavoriteRouter.swift in Sources */,
+				83E5B8F725DED2C100438CF3 /* FavoriteRow.swift in Sources */,
 				8372C48C25DC1669006C2577 /* CustomeError+Ext.swift in Sources */,
 				8305CF5325DCF0BC00A4E358 /* FavoriteView.swift in Sources */,
 				8372C4A525DC2243006C2577 /* HomeUseCase.swift in Sources */,
@@ -803,6 +835,14 @@
 				minimumVersion = 1.5.0;
 			};
 		};
+		836E3D8F25DF698B00DD9424 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/timbersoftware/SwiftUIRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
 		8379FA1825DADDB000921BF4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -826,6 +866,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8305CF6225DD2D5D00A4E358 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		836E3D9025DF698B00DD9424 /* SwiftUIRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 836E3D8F25DF698B00DD9424 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
+			productName = SwiftUIRefresh;
 		};
 		8379FA1925DADDB000921BF4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

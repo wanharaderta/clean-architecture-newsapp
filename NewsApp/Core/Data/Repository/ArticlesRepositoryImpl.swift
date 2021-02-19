@@ -8,15 +8,14 @@
 import Foundation
 import Combine
 
-
 final class ArticlesRepositoryImpl: NSObject {
   
-  typealias ArticlesInstance = (RemoteDataSource,LocaleDataSource) -> ArticlesRepositoryImpl
+  typealias ArticlesInstance = (RemoteDataSource, LocaleDataSource) -> ArticlesRepositoryImpl
   
   fileprivate let remote: RemoteDataSource
   fileprivate let locale: LocaleDataSource
   
-  private init(remote: RemoteDataSource, locale:LocaleDataSource){
+  private init(remote: RemoteDataSource, locale: LocaleDataSource){
     self.remote = remote
     self.locale = locale
   }
@@ -28,6 +27,7 @@ final class ArticlesRepositoryImpl: NSObject {
 }
 
 extension ArticlesRepositoryImpl: ArticlesRepository {
+
   func getArticles() -> AnyPublisher<[ArticleModel], Error> {
     return self.remote.getArticles()
       .map { ArticleMapper.mapArticleResponseToDomain(input: $0) }
@@ -40,8 +40,8 @@ extension ArticlesRepositoryImpl: ArticlesRepository {
       .eraseToAnyPublisher()
   }
   
-  func getArticle(by idArticle: String) -> AnyPublisher<ArticleModel, Error> {
-    return self.locale.getArticle(by: idArticle)
+  func getArticle(by title: String) -> AnyPublisher<ArticleModel, Error> {
+    return self.locale.getArticle(by: title)
       .map { ArticleMapper.mapArticleEntityToDomain(input: $0) }
       .eraseToAnyPublisher()
   }
@@ -52,4 +52,10 @@ extension ArticlesRepositoryImpl: ArticlesRepository {
       .eraseToAnyPublisher()
   }
   
+  func addFavoriteArticle(from article: ArticleModel) -> AnyPublisher<Bool, Error> {
+    let artc  = ArticleMapper.mapArticleDomainToEntity(input: article)
+    return self.locale.addFavoriteArticle(from: artc)
+      .eraseToAnyPublisher()
+  }
+
 }

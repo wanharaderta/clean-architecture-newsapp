@@ -9,8 +9,9 @@ import Foundation
 import Combine
 
 protocol ArticlesRepository: class {
-  
   func getArticles() -> AnyPublisher<[ArticleModel], Error>
   func getFavoriteArticles() -> AnyPublisher<[ArticleModel], Error>
-  func getArticle(by idArticle: String) -> AnyPublisher<ArticleModel, Error>
+  func getArticle(by title: String) -> AnyPublisher<ArticleModel, Error>
+  func updateFavoriteArticle(by idArticle: String) -> AnyPublisher<ArticleModel, Error>
+  func addFavoriteArticle(from article: ArticleModel) -> AnyPublisher<Bool, Error>
 }
