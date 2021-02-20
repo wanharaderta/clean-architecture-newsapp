@@ -65,7 +65,6 @@ struct AboutView: View {
                       TextField("Enter Your Email", text: self.$presenter.email)
                         .disabled(true)
                     }
-                    
                   }
                   
                   Divider()
@@ -78,7 +77,7 @@ struct AboutView: View {
                     self.presenter.getProfile()
                   }
                   self.isEditing.toggle()
-                }){
+                }) {
                   if isEditing {
                     Text("Save").foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 120).padding()
                   } else {
@@ -103,4 +102,3 @@ struct AboutView: View {
     .background(Color.white)
   }
 }
-

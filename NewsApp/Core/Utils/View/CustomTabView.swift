@@ -10,7 +10,6 @@ import SwiftUI
 struct CustomTabView: View {
   
   var tabs = ["home", "favorite", "about"]
-  
   var homePresenter: HomePresenter
   var favoritePresenter: FavoritePresenter
   var aboutPresenter: AboutPresenter
@@ -29,7 +28,6 @@ struct CustomTabView: View {
       }
       .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
       .ignoresSafeArea(.all, edges: .bottom)
-      
       HStack(spacing: 0) {
         ForEach(tabs, id: \.self) { image in
           TabButton(image: image, selectedTab: $selectedtab)

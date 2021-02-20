@@ -41,6 +41,6 @@ struct ArticleRow: View {
           Spacer()
         }
       }.padding(.leading, 10)
-    }.padding([.top, .bottom],5)
+    }.padding([.top, .bottom], 5)
   }
 }

@@ -26,7 +26,6 @@ struct ArticleResponse: Decodable {
   let urlToImage:   String?
   let publishedAt:  String?
   let content:      String?
-  
   private enum CodingKeys: String, CodingKey {
     case source
     case author
@@ -40,7 +39,5 @@ struct ArticleResponse: Decodable {
 }
 
 struct Source: Decodable {
-  
   let name: String?
-  
 }

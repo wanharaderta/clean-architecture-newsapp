@@ -15,15 +15,13 @@ final class ArticlesRepositoryImpl: NSObject {
   fileprivate let remote: RemoteDataSource
   fileprivate let locale: LocaleDataSource
   
-  private init(remote: RemoteDataSource, locale: LocaleDataSource){
+  private init(remote: RemoteDataSource, locale: LocaleDataSource) {
     self.remote = remote
     self.locale = locale
   }
-  
   static let instance: ArticlesInstance = { remoteRepositoy, localeRepository in
     return ArticlesRepositoryImpl(remote: remoteRepositoy, locale: localeRepository)
   }
-  
 }
 
 extension ArticlesRepositoryImpl: ArticlesRepository {

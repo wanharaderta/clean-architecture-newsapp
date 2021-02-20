@@ -13,7 +13,11 @@ struct CustomShape : Shape {
     var radii : CGFloat
     
     func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corner, cornerRadii: CGSize(width: radii, height: radii))
+        let path = UIBezierPath(
+          roundedRect: rect,
+          byRoundingCorners: corner,
+          cornerRadii: CGSize(width: radii, height: radii)
+        )
         return Path(path.cgPath)
     }
 }

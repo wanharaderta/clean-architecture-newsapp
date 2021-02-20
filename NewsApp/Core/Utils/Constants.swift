@@ -7,7 +7,7 @@
 
 import Foundation
 
-let PHOTO : String = "https://d17ivq9b7rppb3.cloudfront.net/small/avatar/20200715114221e8124cb5b0185ee5115b360e20f3bfac.png"
+let PHOTO : String = "https://cutt.ly/ZlyjgoQ"
 let NAME = "name"
 let EMAIL = "email"
 

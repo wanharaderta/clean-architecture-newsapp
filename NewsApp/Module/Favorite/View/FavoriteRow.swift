@@ -43,4 +43,3 @@ struct FavoriteRow: View {
     }.padding([.top, .bottom],5)
   }
 }
-
