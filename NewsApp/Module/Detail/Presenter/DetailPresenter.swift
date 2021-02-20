@@ -27,48 +27,48 @@ class DetailPresenter: ObservableObject {
     detailUseCase.getArticle()
       .receive(on: RunLoop.main)
       .sink(receiveCompletion: { completion in
-          switch completion {
-          case .failure (let error):
-            self.errorMessage = error.localizedDescription
-            self.isLoading = false
-          case .finished:
-            self.isLoading = false
-          }
-        }, receiveValue: { article in
-          self.article = article
-        })
-        .store(in: &cancellables)
+        switch completion {
+        case .failure (let error):
+          self.errorMessage = error.localizedDescription
+          self.isLoading = false
+        case .finished:
+          self.isLoading = false
+        }
+      }, receiveValue: { article in
+        self.article = article
+      })
+      .store(in: &cancellables)
   }
   
-  func updateFavorite() {
-    detailUseCase.updateFavoriteArticle()
+  func unFavorite() {
+    detailUseCase.removeFavoriteArticle()
       .receive(on: RunLoop.main)
       .sink(receiveCompletion: { completion in
-          switch completion {
-          case .failure:
-            self.errorMessage = String(describing: completion)
-          case .finished:
-            self.isLoading = false
-          }
-        }, receiveValue: { article in
-          self.article = article
-        })
-        .store(in: &cancellables)
+        switch completion {
+        case .failure:
+          self.errorMessage = String(describing: completion)
+        case .finished:
+          self.isLoading = false
+        }
+      }, receiveValue: { value in
+        self.article.favorite = value
+      })
+      .store(in: &cancellables)
   }
   
   func addfavorite() {
     detailUseCase.addFavoriteArticle()
       .receive(on: RunLoop.main)
       .sink(receiveCompletion: { completion in
-          switch completion {
-          case .failure:
-            self.errorMessage = String(describing: completion)
-          case .finished:
-            self.isLoading = false
-          }
-        }, receiveValue: { _ in
-          self.getArticle()
-        })
-        .store(in: &cancellables)
+        switch completion {
+        case .failure:
+          self.errorMessage = String(describing: completion)
+        case .finished:
+          self.isLoading = false
+        }
+      }, receiveValue: { value in
+        self.article.favorite = value
+      })
+      .store(in: &cancellables)
   }
 }

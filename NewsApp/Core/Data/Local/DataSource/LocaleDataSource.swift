@@ -11,9 +11,9 @@ import RealmSwift
 protocol LocaleDataSourceProtocol {
   
   func getFavoriteArticles() -> AnyPublisher<[ArticleEntity], Error>
-  func updateFavoriteArticle(by title: String) -> AnyPublisher<ArticleEntity, Error>
   func getArticle(by title: String) -> AnyPublisher<ArticleEntity, Error>
   func addFavoriteArticle(from  article: ArticleEntity) -> AnyPublisher<Bool, Error>
+  func removeFavoriteArticle(from  article: ArticleEntity) -> AnyPublisher<Bool, Error>
 }
 
 final class LocaleDataSource: NSObject {
@@ -66,16 +66,19 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
     }.eraseToAnyPublisher()
   }
   
-  func updateFavoriteArticle(by idArticle: String) -> AnyPublisher<ArticleEntity, Error> {
-    return Future<ArticleEntity, Error> { completion in
-      if let realm = self.realm, let articleEntity = {
-        realm.objects(ArticleEntity.self).filter("idArticle = '\(idArticle)'")
-      }().first {
+  func removeFavoriteArticle(
+    from article: ArticleEntity
+  ) -> AnyPublisher<Bool, Error> {
+    return Future<Bool, Error> { completion in
+      if let realm = self.realm {
         do {
           try realm.write {
-            articleEntity.setValue(!articleEntity.favorite, forKey: "favorite")
+            let objectsToDelete = realm.objects(ArticleEntity.self)
+              .filter("idArticle = '\(article.idArticle)'")
+            
+            realm.delete(objectsToDelete)
+            completion(.success(false))
           }
-          completion(.success(articleEntity))
         } catch {
           completion(.failure(DatabaseError.requestFailed))
         }
@@ -92,9 +95,17 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
       if let realm = self.realm {
         do {
           try realm.write {
-            article.favorite = true
-            realm.add(article)
-            completion(.success(true))
+            if realm.isInWriteTransaction {
+              if realm.object(ofType: ArticleEntity.self, forPrimaryKey: article.idArticle) != nil {
+                completion(.failure(DatabaseError.requestFailed))
+              } else {
+                article.favorite = true
+                realm.add(article, update: .all)
+                completion(.success(true))
+              }
+            } else {
+              completion(.failure(DatabaseError.requestFailed))
+            }
           }
         } catch {
           completion(.failure(DatabaseError.requestFailed))

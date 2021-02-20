@@ -33,7 +33,7 @@ struct DetailView: View {
               .padding(.top, 25)
               Spacer()
               if self.presenter.article.favorite {
-                Button(action: { self.presenter.updateFavorite() }) {
+                Button(action: { self.presenter.unFavorite() }) {
                   Image(systemName: "suit.heart.fill")
                     .foregroundColor(.red)
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 12)

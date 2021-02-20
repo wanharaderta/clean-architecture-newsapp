@@ -46,15 +46,15 @@ extension ArticlesRepositoryImpl: ArticlesRepository {
       .eraseToAnyPublisher()
   }
   
-  func updateFavoriteArticle(by idArticle: String) -> AnyPublisher<ArticleModel, Error> {
-    return self.locale.updateFavoriteArticle(by: idArticle)
-      .map { ArticleMapper.mapArticleEntityToDomain(input: $0) }
-      .eraseToAnyPublisher()
-  }
-  
   func addFavoriteArticle(from article: ArticleModel) -> AnyPublisher<Bool, Error> {
     let artc  = ArticleMapper.mapArticleDomainToEntity(input: article)
     return self.locale.addFavoriteArticle(from: artc)
+      .eraseToAnyPublisher()
+  }
+  
+  func removeFavoriteArticle(from article: ArticleModel) -> AnyPublisher<Bool, Error> {
+    let artc  = ArticleMapper.mapArticleDomainToEntity(input: article)
+    return self.locale.removeFavoriteArticle(from: artc)
       .eraseToAnyPublisher()
   }
 

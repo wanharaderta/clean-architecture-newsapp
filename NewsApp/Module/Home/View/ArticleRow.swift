@@ -15,11 +15,12 @@ struct ArticleRow: View {
     HStack {
       WebImage(url: URL(string: item.urlToImage))
         .resizable()
+        .placeholder(Image(systemName: "photo"))
         .indicator(.activity)
         .transition(.fade(duration: 0.5))
         .cornerRadius(10)
         .scaleEffect()
-        .frame(width: 110, height: 100)
+        .frame(width: 120, height: 100)
       VStack {
         Text(item.title)
           .font(.system(size: 15))
@@ -39,7 +40,7 @@ struct ArticleRow: View {
             .padding(.top, 5)
           Spacer()
         }
-      }.padding(.leading, 5)
+      }.padding(.leading, 10)
     }.padding([.top, .bottom],5)
   }
 }

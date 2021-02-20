@@ -26,11 +26,11 @@ class DetailInteractor: DetailUseCase {
     return article
   }
   
-  func updateFavoriteArticle() -> AnyPublisher<ArticleModel, Error> {
-    return repository.updateFavoriteArticle(by: article.id)
-  }
-  
   func addFavoriteArticle() -> AnyPublisher<Bool, Error> {
     return repository.addFavoriteArticle(from: article)
+  }
+  
+  func removeFavoriteArticle() -> AnyPublisher<Bool, Error> {
+    return repository.removeFavoriteArticle(from: article)
   }
 }

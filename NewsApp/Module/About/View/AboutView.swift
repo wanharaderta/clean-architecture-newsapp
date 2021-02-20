@@ -96,7 +96,11 @@ struct AboutView: View {
           .padding()
         })
       }
-    }.background(Color.white)
+    }
+    .onAppear {
+      self.presenter.getProfile()
+    }
+    .background(Color.white)
   }
 }
 

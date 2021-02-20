@@ -31,13 +31,29 @@ struct FavoriteView: View {
         } else {
           List {
             if presenter.articles.count == 0 {
-              Text("Empty")
-            } else {
-              ForEach(self.presenter.articles, id: \.id) { article in
-                FavoriteRow(item: article).onTapGesture {
-                  self.articleSelected = article
+              Spacer()
+              HStack {
+                Spacer()
+                VStack {
+                  Image("news")
+                    .resizable()
+                    .frame(width: 150, height: 150, alignment: .center)
+                  Text("Favorite Empty")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .padding()
                 }
+                Spacer()
               }
+              Spacer()
+            } else {
+              VStack {
+                ForEach(self.presenter.articles, id: \.id) { item in
+                  ArticleRow(item: item).onTapGesture {
+                    self.articleSelected = item
+                  }
+                }
+              }.padding(.bottom, 120)
             }
           }.pullToRefresh(isShowing: $isShowing) {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

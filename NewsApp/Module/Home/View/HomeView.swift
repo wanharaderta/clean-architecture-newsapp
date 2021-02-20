@@ -56,11 +56,13 @@ struct HomeView: View {
                   ActivityIndicator()
                 }
               } else {
-                ForEach(self.presenter.articles, id: \.id) { item in
-                  ArticleRow(item: item).onTapGesture {
-                    self.articleSelected = item
+                VStack {
+                  ForEach(self.presenter.articles, id: \.id) { item in
+                    ArticleRow(item: item).onTapGesture {
+                      self.articleSelected = item
+                    }
                   }
-                }
+                }.padding(.bottom, 120)
               }
             }
             .padding(.top, 15)
