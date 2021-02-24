@@ -10,13 +10,13 @@ import RealmSwift
 
 protocol LocaleDataSourceProtocol {
   
-  func getFavoriteArticles() -> AnyPublisher<[ArticleEntity], Error>
-  func getArticle(by title: String) -> AnyPublisher<ArticleEntity, Error>
-  func addFavoriteArticle(from  article: ArticleEntity) -> AnyPublisher<Bool, Error>
-  func removeFavoriteArticle(from  article: ArticleEntity) -> AnyPublisher<Bool, Error>
+  func getFavoriteArticles() -> AnyPublisher<[ArticleEntityOld], Error>
+  func getArticle(by title: String) -> AnyPublisher<ArticleEntityOld, Error>
+  func addFavoriteArticle(from  article: ArticleEntityOld) -> AnyPublisher<Bool, Error>
+  func removeFavoriteArticle(from  article: ArticleEntityOld) -> AnyPublisher<Bool, Error>
 }
 
-final class LocaleDataSource: NSObject {
+final class LocaleDataSourceOld: NSObject {
   
   private let realm: Realm?
   
@@ -24,20 +24,20 @@ final class LocaleDataSource: NSObject {
     self.realm = realm
   }
   
-  static let instance: (Realm?) -> LocaleDataSource = { realmDB in
-    return LocaleDataSource(realm: realmDB)
+  static let instance: (Realm?) -> LocaleDataSourceOld = { realmDB in
+    return LocaleDataSourceOld(realm: realmDB)
   }
 }
 
-extension LocaleDataSource: LocaleDataSourceProtocol {
+extension LocaleDataSourceOld: LocaleDataSourceProtocol {
   
   func getArticle(
     by title: String
-  ) -> AnyPublisher<ArticleEntity, Error> {
-    return Future<ArticleEntity, Error> { completion in
+  ) -> AnyPublisher<ArticleEntityOld, Error> {
+    return Future<ArticleEntityOld, Error> { completion in
       if let realm = self.realm {
-        let articles: Results<ArticleEntity> = {
-          realm.objects(ArticleEntity.self)
+        let articles: Results<ArticleEntityOld> = {
+          realm.objects(ArticleEntityOld.self)
             .filter("title = '\(title)'")
         }()
         
@@ -52,14 +52,14 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
     }.eraseToAnyPublisher()
   }
   
-  func getFavoriteArticles() -> AnyPublisher<[ArticleEntity], Error> {
-    return Future<[ArticleEntity], Error> { completion in
+  func getFavoriteArticles() -> AnyPublisher<[ArticleEntityOld], Error> {
+    return Future<[ArticleEntityOld], Error> { completion in
       if let realm = self.realm {
         let articleEntities = {
-          realm.objects(ArticleEntity.self)
+          realm.objects(ArticleEntityOld.self)
             .filter("favorite = \(true)")
         }()
-        completion(.success(articleEntities.toArray(ofType: ArticleEntity.self)))
+        completion(.success(articleEntities.toArray(ofType: ArticleEntityOld.self)))
       } else {
         completion(.failure(DatabaseError.invalidInstance))
       }
@@ -67,13 +67,13 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
   }
   
   func removeFavoriteArticle(
-    from article: ArticleEntity
+    from article: ArticleEntityOld
   ) -> AnyPublisher<Bool, Error> {
     return Future<Bool, Error> { completion in
       if let realm = self.realm {
         do {
           try realm.write {
-            let objectsToDelete = realm.objects(ArticleEntity.self)
+            let objectsToDelete = realm.objects(ArticleEntityOld.self)
               .filter("idArticle = '\(article.idArticle)'")
             
             realm.delete(objectsToDelete)
@@ -89,14 +89,14 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
   }
   
   func addFavoriteArticle(
-    from article: ArticleEntity
+    from article: ArticleEntityOld
   ) -> AnyPublisher<Bool, Error> {
     return Future<Bool, Error> { completion in
       if let realm = self.realm {
         do {
           try realm.write {
             if realm.isInWriteTransaction {
-              if realm.object(ofType: ArticleEntity.self, forPrimaryKey: article.idArticle) != nil {
+              if realm.object(ofType: ArticleEntityOld.self, forPrimaryKey: article.idArticle) != nil {
                 completion(.failure(DatabaseError.requestFailed))
               } else {
                 article.favorite = true

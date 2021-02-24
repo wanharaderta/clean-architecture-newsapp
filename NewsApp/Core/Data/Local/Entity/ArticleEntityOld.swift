@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class ArticleEntity: Object {
+class ArticleEntityOld: Object {
   @objc dynamic var idArticle = ""
   @objc dynamic var author = ""
   @objc dynamic var sourceName = ""

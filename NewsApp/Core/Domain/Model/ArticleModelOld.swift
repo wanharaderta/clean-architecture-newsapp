@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ArticleModel: Equatable, Identifiable {
+struct ArticleModelOld: Equatable, Identifiable {
   
   let id: String
   let author: String
