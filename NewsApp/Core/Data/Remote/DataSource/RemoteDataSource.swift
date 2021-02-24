@@ -27,8 +27,7 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
 
   func getArticles() -> AnyPublisher<[ArticleResponse], Error> {
     return Future<[ArticleResponse], Error> { completion in
-      if let url = URL(string: "https://newsapi.org/v2/top-headlines?country=id&category=technology&apiKey=5dab24aff4f14b57b567608a51f8c256") {
-        
+      if let url = URL(string: Endpoints.Gets.news.url) {
         AF.request(url)
           .validate()
           .responseDecodable(of: ArticlesResponse.self) { response in
@@ -37,7 +36,6 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
               completion(.success(value.articles))
             case .failure:
               completion(.failure(URLError.invalidResponse))
-              print("wanhar \(response.result)")
             }
           }
       }

@@ -43,8 +43,6 @@ final class ArticleMapper {
   static func mapArticleEntityToDomain(
     input articleEntity: ArticleEntity
   ) -> ArticleModel {
-    print("wanhar \(articleEntity.desc)")
-    print("wanhar \(articleEntity.favorite)")
     return ArticleModel(
       id: articleEntity.idArticle,
       author: articleEntity.author,

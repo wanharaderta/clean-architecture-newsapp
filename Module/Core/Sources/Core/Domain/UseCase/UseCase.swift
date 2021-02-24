@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-public protocol Repository {
+public protocol UseCase {
   associatedtype Request
   associatedtype Response
   
