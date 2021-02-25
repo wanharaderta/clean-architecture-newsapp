@@ -10,19 +10,19 @@ import Combine
 
 class DetailInteractor: DetailUseCase {
 
-  private let repository: ArticlesRepository
-  private let article: ArticleModel
+  private let repository: ArticlesRepositoryOld
+  private let article: ArticleModelOld
   
-  required init(repository: ArticlesRepository, article: ArticleModel) {
+  required init(repository: ArticlesRepositoryOld, article: ArticleModelOld) {
     self.repository = repository
     self.article = article
   }
   
-  func getArticle() -> AnyPublisher<ArticleModel, Error> {
+  func getArticle() -> AnyPublisher<ArticleModelOld, Error> {
     return repository.getArticle(by: article.title)
   }
   
-  func getArticle() -> ArticleModel {
+  func getArticle() -> ArticleModelOld {
     return article
   }
   

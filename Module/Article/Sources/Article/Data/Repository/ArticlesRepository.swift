@@ -10,26 +10,26 @@ import Combine
 import Core
 
 public struct ArticlesRepository<
-  ArticleLocaleDataSource: LocalDataSource,
-  ArticleRemoteDataSource: DataSource,
+  ArticlesLocaleDataSource: LocaleDataSource,
+  ArticlesRemoteDataSource: DataSource,
   Transformer: Mapper> : Repository
 where
-  ArticleLocaleDataSource.Response == ArticleEntity,
-  ArticleRemoteDataSource.Response == [ArticleResponse],
+  ArticlesLocaleDataSource.Response == ArticleEntity,
+  ArticlesRemoteDataSource.Response == [ArticleResponse],
   Transformer.Response == [ArticleResponse],
   Transformer.Entity == [ArticleEntity],
   Transformer.Domain == [ArticleModel]{
-  
+
   public typealias Request = Any
   public typealias Response = [ArticleModel]
   
-  private let _locale: ArticleLocaleDataSource
-  private let _remote: ArticleRemoteDataSource
+  private let _locale: ArticlesLocaleDataSource
+  private let _remote: ArticlesRemoteDataSource
   private let _mapper: Transformer
   
   public init(
-    localeDataSource: ArticleLocaleDataSource,
-    remoteDataSource: ArticleRemoteDataSource,
+    localeDataSource: ArticlesLocaleDataSource,
+    remoteDataSource: ArticlesRemoteDataSource,
     mapper: Transformer
   ) {
     _locale = localeDataSource
@@ -37,10 +37,9 @@ where
     _mapper = mapper
   }
   
-  public func getList(request: Any?) -> AnyPublisher<[ArticleModel], Error> {
-    return self._remote.getList(request: nil)
-      .map { ArticleMapper.mapArticleResponseToDomain(input: $0) }
+  public func execute(request: Any?) -> AnyPublisher<[ArticleModel], Error> {
+    return self._remote.execute(request: nil)
+      .map {  _mapper.transformResponseToDomain(response: $0) }
       .eraseToAnyPublisher()
   }
-  
 }

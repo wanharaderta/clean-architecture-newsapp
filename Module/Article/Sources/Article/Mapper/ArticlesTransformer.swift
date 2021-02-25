@@ -9,15 +9,14 @@ import Foundation
 import Core
 
 public struct ArticlesTransformer: Mapper {
+  
   public typealias Response = [ArticleResponse]
   public typealias Entity = [ArticleEntity]
   public typealias Domain = [ArticleModel]
   
   public init() {}
   
-  public func transformResponseToDomain(
-    response: [ArticleResponse]
-  ) -> [ArticleModel] {
+  public func transformResponseToDomain(response: [ArticleResponse]) -> [ArticleModel] {
     return response.map { result in
       return ArticleModel(
         id: result.id,
@@ -26,7 +25,8 @@ public struct ArticlesTransformer: Mapper {
         title: result.title ?? "",
         urlToImage: result.urlToImage ?? "",
         content: result.content ?? "",
-        description:result.description ?? "")
+        description:result.description ?? "",
+        favorite: false)
     }
   }
 }

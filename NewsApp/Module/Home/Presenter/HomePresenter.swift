@@ -14,7 +14,7 @@ class HomePresenter: ObservableObject {
   private let router = HomeRouter()
   private let homeUsecase: HomeUseCase
   
-  @Published var articles: [ArticleModel] = []
+  @Published var articles: [ArticleModelOld] = []
   @Published var errorMessage: String = ""
   @Published var currentDate: String = ""
   @Published var isLoading: Bool = false
@@ -47,7 +47,7 @@ class HomePresenter: ObservableObject {
   }
   
   func linkBuilder(
-      for article: ArticleModel
+      for article: ArticleModelOld
   ) -> some View {
       return router.makeDetailView(for: article)
   }

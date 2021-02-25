@@ -10,12 +10,12 @@ import Combine
 
 final class ArticlesRepositoryImpl: NSObject {
   
-  typealias ArticlesInstance = (RemoteDataSource, LocaleDataSource) -> ArticlesRepositoryImpl
+  typealias ArticlesInstance = (RemoteDataSource, LocaleDataSourceOld) -> ArticlesRepositoryImpl
   
   fileprivate let remote: RemoteDataSource
-  fileprivate let locale: LocaleDataSource
+  fileprivate let locale: LocaleDataSourceOld
   
-  private init(remote: RemoteDataSource, locale: LocaleDataSource) {
+  private init(remote: RemoteDataSource, locale: LocaleDataSourceOld) {
     self.remote = remote
     self.locale = locale
   }
@@ -24,33 +24,33 @@ final class ArticlesRepositoryImpl: NSObject {
   }
 }
 
-extension ArticlesRepositoryImpl: ArticlesRepository {
+extension ArticlesRepositoryImpl: ArticlesRepositoryOld {
 
-  func getArticles() -> AnyPublisher<[ArticleModel], Error> {
+  func getArticles() -> AnyPublisher<[ArticleModelOld], Error> {
     return self.remote.getArticles()
       .map { ArticleMapper.mapArticleResponseToDomain(input: $0) }
       .eraseToAnyPublisher()
   }
   
-  func getFavoriteArticles() -> AnyPublisher<[ArticleModel], Error> {
+  func getFavoriteArticles() -> AnyPublisher<[ArticleModelOld], Error> {
     return self.locale.getFavoriteArticles()
       .map { ArticleMapper.mapArticleEntitiesToDomain(input: $0) }
       .eraseToAnyPublisher()
   }
   
-  func getArticle(by title: String) -> AnyPublisher<ArticleModel, Error> {
+  func getArticle(by title: String) -> AnyPublisher<ArticleModelOld, Error> {
     return self.locale.getArticle(by: title)
       .map { ArticleMapper.mapArticleEntityToDomain(input: $0) }
       .eraseToAnyPublisher()
   }
   
-  func addFavoriteArticle(from article: ArticleModel) -> AnyPublisher<Bool, Error> {
+  func addFavoriteArticle(from article: ArticleModelOld) -> AnyPublisher<Bool, Error> {
     let artc  = ArticleMapper.mapArticleDomainToEntity(input: article)
     return self.locale.addFavoriteArticle(from: artc)
       .eraseToAnyPublisher()
   }
   
-  func removeFavoriteArticle(from article: ArticleModel) -> AnyPublisher<Bool, Error> {
+  func removeFavoriteArticle(from article: ArticleModelOld) -> AnyPublisher<Bool, Error> {
     let artc  = ArticleMapper.mapArticleDomainToEntity(input: article)
     return self.locale.removeFavoriteArticle(from: artc)
       .eraseToAnyPublisher()

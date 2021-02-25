@@ -11,7 +11,7 @@ import SwiftUIRefresh
 struct FavoriteView: View {
   
   @ObservedObject var presenter: FavoritePresenter
-  @State private var articleSelected: ArticleModel? = nil
+  @State private var articleSelected: ArticleModelOld? = nil
   @State private var isShowing = false
   
   var body: some View {
@@ -49,9 +49,9 @@ struct FavoriteView: View {
             } else {
               VStack {
                 ForEach(self.presenter.articles, id: \.id) { item in
-                  ArticleRow(item: item).onTapGesture {
-                    self.articleSelected = item
-                  }
+//                  ArticleRow(item: item).onTapGesture {
+//                    self.articleSelected = item
+//                  }
                 }
               }.padding(.bottom, 120)
             }

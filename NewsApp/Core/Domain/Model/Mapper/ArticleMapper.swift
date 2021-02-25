@@ -11,10 +11,10 @@ final class ArticleMapper {
   
   static func mapArticleResponseToDomain(
     input articleResponse: [ArticleResponse]
-  ) -> [ArticleModel] {
+  ) -> [ArticleModelOld] {
     
     return articleResponse.map { result in
-      return ArticleModel(
+      return ArticleModelOld(
         id: result.id,
         author: result.author ?? "",
         sourceName: result.source?.name ?? "",
@@ -26,10 +26,10 @@ final class ArticleMapper {
   }
   
   static func mapArticleEntitiesToDomain(
-    input articleEntities: [ArticleEntity]
-  ) -> [ArticleModel] {
+    input articleEntities: [ArticleEntityOld]
+  ) -> [ArticleModelOld] {
     return articleEntities.map { result in
-      return ArticleModel(
+      return ArticleModelOld(
         id: result.idArticle,
         author: result.author,
         sourceName: result.sourceName,
@@ -41,9 +41,9 @@ final class ArticleMapper {
   }
   
   static func mapArticleEntityToDomain(
-    input articleEntity: ArticleEntity
-  ) -> ArticleModel {
-    return ArticleModel(
+    input articleEntity: ArticleEntityOld
+  ) -> ArticleModelOld {
+    return ArticleModelOld(
       id: articleEntity.idArticle,
       author: articleEntity.author,
       sourceName: articleEntity.sourceName,
@@ -56,9 +56,9 @@ final class ArticleMapper {
   }
   
   static func mapArticleDomainToEntity(
-    input article: ArticleModel
-  ) -> ArticleEntity {
-    let articleEntity = ArticleEntity()
+    input article: ArticleModelOld
+  ) -> ArticleEntityOld {
+    let articleEntity = ArticleEntityOld()
     articleEntity.idArticle = article.id
     articleEntity.author = article.author
     articleEntity.sourceName = article.sourceName

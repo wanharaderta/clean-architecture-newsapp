@@ -10,6 +10,6 @@ import Combine
 
 protocol HomeUseCase {
   
-  func getArticles() -> AnyPublisher<[ArticleModel], Error>
+  func getArticles() -> AnyPublisher<[ArticleModelOld], Error>
   
 }

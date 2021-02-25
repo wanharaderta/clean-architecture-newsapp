@@ -9,13 +9,13 @@ import Combine
 
 class FavoriteInteractor: FavoriteUseCase {
   
-  private let repository: ArticlesRepository
+  private let repository: ArticlesRepositoryOld
   
-  required init(repository: ArticlesRepository) {
+  required init(repository: ArticlesRepositoryOld) {
     self.repository = repository
   }
   
-  func getFavoriteArticle() -> AnyPublisher<[ArticleModel], Error> {
+  func getFavoriteArticle() -> AnyPublisher<[ArticleModelOld], Error> {
     return repository.getFavoriteArticles()
   }
 }

@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 
 struct FavoriteRow: View {
   
-  var item: ArticleModel
+  var item: ArticleModelOld
   var body: some View {
     HStack {
       WebImage(url: URL(string: item.urlToImage))

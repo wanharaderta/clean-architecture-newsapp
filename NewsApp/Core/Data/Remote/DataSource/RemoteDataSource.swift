@@ -30,12 +30,12 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
       if let url = URL(string: Endpoints.Gets.news.url) {
         AF.request(url)
           .validate()
-          .responseDecodable(of: ArticlesResponse.self) { response in
+          .responseDecodable(of: ArticlesResponseOld.self) { response in
             switch response.result {
             case .success(let value):
               completion(.success(value.articles))
-            case .failure:
-              completion(.failure(URLError.invalidResponse))
+            case .failure: break
+             // completion(.failure(URLError.invalidResponse))
             }
           }
       }

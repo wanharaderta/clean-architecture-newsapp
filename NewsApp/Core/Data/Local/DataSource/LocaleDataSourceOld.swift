@@ -42,12 +42,12 @@ extension LocaleDataSourceOld: LocaleDataSourceProtocol {
         }()
         
         guard let article = articles.first else {
-          completion(.failure(DatabaseError.requestFailed))
+          //completion(.failure(DatabaseError.requestFailed))
           return
         }
         completion(.success(article))
       } else {
-        completion(.failure(DatabaseError.invalidInstance))
+        //completion(.failure(DatabaseError.invalidInstance))
       }
     }.eraseToAnyPublisher()
   }
@@ -61,7 +61,7 @@ extension LocaleDataSourceOld: LocaleDataSourceProtocol {
         }()
         completion(.success(articleEntities.toArray(ofType: ArticleEntityOld.self)))
       } else {
-        completion(.failure(DatabaseError.invalidInstance))
+       // completion(.failure(DatabaseError.invalidInstance))
       }
     }.eraseToAnyPublisher()
   }
@@ -80,10 +80,10 @@ extension LocaleDataSourceOld: LocaleDataSourceProtocol {
             completion(.success(false))
           }
         } catch {
-          completion(.failure(DatabaseError.requestFailed))
+          //completion(.failure(DatabaseError.requestFailed))
         }
       } else {
-        completion(.failure(DatabaseError.invalidInstance))
+       // completion(.failure(DatabaseError.invalidInstance))
       }
     }.eraseToAnyPublisher()
   }
@@ -97,21 +97,21 @@ extension LocaleDataSourceOld: LocaleDataSourceProtocol {
           try realm.write {
             if realm.isInWriteTransaction {
               if realm.object(ofType: ArticleEntityOld.self, forPrimaryKey: article.idArticle) != nil {
-                completion(.failure(DatabaseError.requestFailed))
+           //     completion(.failure(DatabaseError.requestFailed))
               } else {
                 article.favorite = true
                 realm.add(article, update: .all)
                 completion(.success(true))
               }
             } else {
-              completion(.failure(DatabaseError.requestFailed))
+             // completion(.failure(DatabaseError.requestFailed))
             }
           }
         } catch {
-          completion(.failure(DatabaseError.requestFailed))
+          //completion(.failure(DatabaseError.requestFailed))
         }
       } else {
-        completion(.failure(DatabaseError.invalidInstance))
+       // completion(.failure(DatabaseError.invalidInstance))//
       }
     }.eraseToAnyPublisher()
   }

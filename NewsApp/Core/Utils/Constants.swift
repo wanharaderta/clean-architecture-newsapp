@@ -11,7 +11,7 @@ let PHOTO : String = "https://cutt.ly/ZlyjgoQ"
 let NAME = "name"
 let EMAIL = "email"
 
-let ARTICLEDUMMY: ArticleModel = ArticleModel(
+let ARTICLEDUMMY: ArticleModelOld = ArticleModelOld(
   id: "1",
   author: "www.google.com",
   sourceName: "Wanhar",

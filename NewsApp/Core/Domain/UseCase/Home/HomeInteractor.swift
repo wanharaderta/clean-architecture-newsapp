@@ -10,13 +10,13 @@ import Combine
 
 class HomeInteractor: HomeUseCase {
   
-  private let repository: ArticlesRepository
+  private let repository: ArticlesRepositoryOld
   
-  required init(repository: ArticlesRepository) {
+  required init(repository: ArticlesRepositoryOld) {
     self.repository = repository
   }
   
-  func getArticles() -> AnyPublisher<[ArticleModel], Error> {
+  func getArticles() -> AnyPublisher<[ArticleModelOld], Error> {
     return repository.getArticles()
   }
 }

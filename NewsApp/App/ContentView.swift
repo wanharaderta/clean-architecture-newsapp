@@ -6,10 +6,22 @@
 //
 
 import SwiftUI
+import Article
+import Core
 
 struct ContentView: View {
   
-  @EnvironmentObject var homePresenter: HomePresenter
+  @EnvironmentObject var homePresenter: GetListPresenter<
+    Any,
+    ArticleModel,
+    Interactor<
+      Any,
+      [ArticleModel],
+      ArticlesRepository<
+        ArticlesLocaleDataSource,
+        ArticlesRemoteDataSource,
+        ArticlesTransformer>
+    >>
   @EnvironmentObject var favoritePresenter: FavoritePresenter
   @EnvironmentObject var aboutPresenter: AboutPresenter
   

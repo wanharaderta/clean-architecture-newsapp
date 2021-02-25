@@ -15,7 +15,7 @@ class FavoritePresenter: ObservableObject {
   private let router = FavoriteRouter()
   private let useCase: FavoriteUseCase
   
-  @Published var articles: [ArticleModel] = []
+  @Published var articles: [ArticleModelOld] = []
   @Published var errorMessage: String = ""
   @Published var isLoading: Bool = false
   
@@ -40,7 +40,7 @@ class FavoritePresenter: ObservableObject {
   }
   
   func linkBuilder(
-      for article: ArticleModel
+      for article: ArticleModelOld
   ) -> some View {
       return router.makeDetailView(for: article)
   }

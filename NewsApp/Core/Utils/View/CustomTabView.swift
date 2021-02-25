@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import Core
+import Article
 
 struct CustomTabView: View {
   
   var tabs = ["home", "favorite", "about"]
-  var homePresenter: HomePresenter
+  var homePresenter: GetListPresenter<Any, ArticleModel, Interactor<Any, [ArticleModel], ArticlesRepository<ArticlesLocaleDataSource, ArticlesRemoteDataSource, ArticlesTransformer>>>
   var favoritePresenter: FavoritePresenter
   var aboutPresenter: AboutPresenter
   

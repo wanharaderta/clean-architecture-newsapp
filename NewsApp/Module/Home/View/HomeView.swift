@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import Article
+import Core
 
 struct HomeView: View {
   
-  @ObservedObject var presenter: HomePresenter
+  @ObservedObject var presenter: GetListPresenter<Any, ArticleModel, Interactor<Any, [ArticleModel], ArticlesRepository<ArticlesLocaleDataSource, ArticlesRemoteDataSource, ArticlesTransformer>>>
   @State private var articleSelected: ArticleModel? = nil
   @State private var showingAlert = false
   @State var querySearch = ""
@@ -26,9 +28,9 @@ struct HomeView: View {
         })
         
         Spacer(minLength: 0)
-        Text(self.presenter.currentDate)
-          .font(.body)
-          .foregroundColor(.gray)
+//        Text(self.presenter.currentDate)
+//          .font(.body)
+//          .foregroundColor(.gray)
       }.padding()
       
       ScrollView(.vertical, showsIndicators: false, content: {
@@ -57,7 +59,7 @@ struct HomeView: View {
                 }
               } else {
                 VStack {
-                  ForEach(self.presenter.articles, id: \.id) { item in
+                  ForEach(self.presenter.list, id: \.id) { item in
                     ArticleRow(item: item).onTapGesture {
                       self.articleSelected = item
                     }
@@ -67,14 +69,14 @@ struct HomeView: View {
             }
             .padding(.top, 15)
           }.onAppear {
-            if self.presenter.articles.count == 0 {
-              self.presenter.getArticles()
+            if self.presenter.list.count == 0 {
+              self.presenter.getList(request: nil)
             }
           }
         }.padding()
       })
     }.sheet(item: $articleSelected) { item in
-      self.presenter.linkBuilder(for: item)
+      //self.presenter.linkBuilder(for: item)
     }
     .alert(isPresented: $showingAlert) {
       Alert(

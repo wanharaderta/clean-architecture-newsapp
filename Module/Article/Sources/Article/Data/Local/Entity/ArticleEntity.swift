@@ -8,8 +8,8 @@
 import Foundation
 import RealmSwift
 
-class ArticleEntity: : Object {
-  @objc dynamic var idArticle = ""
+public class ArticleEntity: Object {
+  @objc dynamic var itemId = ""
   @objc dynamic var author = ""
   @objc dynamic var sourceName = ""
   @objc dynamic var title = ""
@@ -18,8 +18,9 @@ class ArticleEntity: : Object {
   @objc dynamic var desc = ""
   @objc dynamic var favorite = false
   
-  override class func primaryKey() -> String? {
-    return "idArticle"
+  public override class func primaryKey() -> String? {
+    return "itemId"
   }
 }
+
 

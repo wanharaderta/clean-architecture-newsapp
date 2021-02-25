@@ -9,8 +9,8 @@ import Combine
 
 protocol DetailUseCase {
 
-  func getArticle() -> ArticleModel
-  func getArticle() -> AnyPublisher<ArticleModel, Error>
+  func getArticle() -> ArticleModelOld
+  func getArticle() -> AnyPublisher<ArticleModelOld, Error>
   func addFavoriteArticle() -> AnyPublisher<Bool, Error>
   func removeFavoriteArticle() -> AnyPublisher<Bool, Error>
 }

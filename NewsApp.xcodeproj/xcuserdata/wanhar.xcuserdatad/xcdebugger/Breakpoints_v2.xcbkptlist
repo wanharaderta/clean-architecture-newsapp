@@ -418,14 +418,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "A9F0994B-EF28-44AC-97B0-EE1DBD2CF246 - 4e43931339221a54"
+                  uuid = "A9F0994B-EF28-44AC-97B0-EE1DBD2CF246 - b397fb9dd08107f3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "NewsApp.DetailPresenter.getArticle() -&gt; ()"
                   moduleName = "NewsApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wanhar/Desktop/News%20-%20wanhar/NewsApp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
@@ -433,14 +433,14 @@
                   offsetFromSymbolStart = "563">
                </Location>
                <Location
-                  uuid = "A9F0994B-EF28-44AC-97B0-EE1DBD2CF246 - acc97067600b9a4e"
+                  uuid = "A9F0994B-EF28-44AC-97B0-EE1DBD2CF246 - 511d18e989a887e5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in NewsApp.DetailPresenter.getArticle() -&gt; ()"
                   moduleName = "NewsApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wanhar/Desktop/News%20-%20wanhar/NewsApp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -466,14 +466,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "98A75671-4574-41F0-932F-920F286A8C14 - acc97067600b9a4e"
+                  uuid = "98A75671-4574-41F0-932F-920F286A8C14 - 511d18e989a887e5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in NewsApp.DetailPresenter.getArticle() -&gt; ()"
                   moduleName = "NewsApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wanhar/Desktop/News%20-%20wanhar/NewsApp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -481,14 +481,14 @@
                   offsetFromSymbolStart = "106">
                </Location>
                <Location
-                  uuid = "98A75671-4574-41F0-932F-920F286A8C14 - acc97067600b9a4e"
+                  uuid = "98A75671-4574-41F0-932F-920F286A8C14 - 511d18e989a887e5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in NewsApp.DetailPresenter.getArticle() -&gt; ()"
                   moduleName = "NewsApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wanhar/Desktop/News%20-%20wanhar/NewsApp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -592,38 +592,6 @@
             endingLineNumber = "71"
             landmarkName = "removeFavoriteArticle(from:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "921A9E95-E0CF-4DF2-83A9-ADF114528240 - f50f92d37ccaa819"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NewsApp.LocaleDataSource.removeFavoriteArticle(from: NewsApp.ArticleEntity) -&gt; Combine.AnyPublisher&lt;Swift.Bool, Swift.Error&gt;"
-                  moduleName = "NewsApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wanhar/Desktop/News%20-%20wanhar/NewsApp/NewsApp/Core/Data/Local/DataSource/LocaleDataSource.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "34">
-               </Location>
-               <Location
-                  uuid = "921A9E95-E0CF-4DF2-83A9-ADF114528240 - 22c066e92c5f9879"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 ((Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; () in NewsApp.LocaleDataSource.removeFavoriteArticle(from: NewsApp.ArticleEntity) -&gt; Combine.AnyPublisher&lt;Swift.Bool, Swift.Error&gt;"
-                  moduleName = "NewsApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wanhar/Desktop/News%20-%20wanhar/NewsApp/NewsApp/Core/Data/Local/DataSource/LocaleDataSource.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "141">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -658,14 +626,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C2A43C17-7358-4A78-B090-20408413EB57 - 69048d06200d1e33"
+                  uuid = "C2A43C17-7358-4A78-B090-20408413EB57 - 94d0e588c9ae1dd4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "NewsApp.DetailPresenter.unFavorite() -&gt; ()"
                   moduleName = "NewsApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wanhar/Desktop/News%20-%20wanhar/NewsApp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
@@ -673,14 +641,14 @@
                   offsetFromSymbolStart = "596">
                </Location>
                <Location
-                  uuid = "C2A43C17-7358-4A78-B090-20408413EB57 - 57930d33d7f3639b"
+                  uuid = "C2A43C17-7358-4A78-B090-20408413EB57 - aa4765bd3e50607c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in NewsApp.DetailPresenter.unFavorite() -&gt; ()"
                   moduleName = "NewsApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wanhar/Desktop/News%20-%20wanhar/NewsApp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
@@ -688,14 +656,14 @@
                   offsetFromSymbolStart = "193">
                </Location>
                <Location
-                  uuid = "C2A43C17-7358-4A78-B090-20408413EB57 - c0962e9e4b39a832"
+                  uuid = "C2A43C17-7358-4A78-B090-20408413EB57 - 3d424610a29aab97"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #2 (Swift.Bool) -&gt; () in NewsApp.DetailPresenter.unFavorite() -&gt; ()"
                   moduleName = "NewsApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wanhar/Desktop/News%20-%20wanhar/NewsApp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "54"
@@ -785,14 +753,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "858D20B8-CFFD-4D8B-B984-8995D877F4C8 - 69048d06200d0118"
+                  uuid = "858D20B8-CFFD-4D8B-B984-8995D877F4C8 - 94d0e588c9ae1cbd"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "NewsApp.DetailPresenter.unFavorite() -&gt; ()"
                   moduleName = "NewsApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wanhar/Desktop/News%20-%20wanhar/NewsApp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "46"
@@ -800,14 +768,14 @@
                   offsetFromSymbolStart = "516">
                </Location>
                <Location
-                  uuid = "858D20B8-CFFD-4D8B-B984-8995D877F4C8 - 57930d33d7f36376"
+                  uuid = "858D20B8-CFFD-4D8B-B984-8995D877F4C8 - aa4765bd3e5061db"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in NewsApp.DetailPresenter.unFavorite() -&gt; ()"
                   moduleName = "NewsApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wanhar/Desktop/News%20-%20wanhar/NewsApp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Detail/Presenter/DetailPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "48"
@@ -894,6 +862,371 @@
             startingLineNumber = "56"
             endingLineNumber = "56"
             landmarkName = "unFavorite()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0BADFB3F-FD21-4466-9884-1A98E7390A44"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Module/Article/Sources/Article/Data/Local/ArticlesLocaleDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "ArticlesLocaleDataSource"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DED886B3-8782-4BCB-A298-683CEA81684E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Module/Article/Sources/Article/Data/Local/ArticlesLocaleDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(realm:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5854E989-66D7-49E3-9C51-8E9407B06D1E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Core/DI/Injection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "provideArticle()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "659A8E66-13EC-4AAC-8E18-61CB762650BF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Core/DI/Injection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "provideArticle()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "07BF4EB0-EE47-42C7-8D3E-72253EEB7B50"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/App/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "07BF4EB0-EE47-42C7-8D3E-72253EEB7B50 - c6563cf1bc4a4b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsApp.AppDelegate.realm.getter : Swift.Optional&lt;RealmSwift.Realm&gt;"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/App/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "07BF4EB0-EE47-42C7-8D3E-72253EEB7B50 - f3587b2a8d278527"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsApp.AppDelegate.realm.setter : Swift.Optional&lt;RealmSwift.Realm&gt;"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/App/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "07BF4EB0-EE47-42C7-8D3E-72253EEB7B50 - 85bc134373a3f25a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsApp.AppDelegate.realm.modify : Swift.Optional&lt;RealmSwift.Realm&gt;"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/App/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "07BF4EB0-EE47-42C7-8D3E-72253EEB7B50 - 2a1c86cff9f68e3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsApp.AppDelegate.realm.modify : Swift.Optional&lt;RealmSwift.Realm&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/App/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "07BF4EB0-EE47-42C7-8D3E-72253EEB7B50 - c3fe43897374c471"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewsApp.AppDelegate.init() -&gt; NewsApp.AppDelegate"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/App/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "47">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "67090ECC-9DD5-4373-8DB2-61EA0574A14F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/App/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "application(_:configurationForConnecting:options:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98335F78-790D-48C0-9DA2-3F415163E838"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/App/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "application(_:didDiscardSceneSessions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F11643FA-4438-477F-B989-312528A7E098"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Core/DI/Injection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "Injection"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC602F4D-AA9C-4188-A0A0-2E4B07379195"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Core/DI/Injection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "provideArticle()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "281725C1-4AAC-48DD-827A-06AF340AEF61"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Core/DI/Injection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "provideArticle()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3F512D2-FDD6-494C-A195-487833097941"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Core/DI/Injection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "provideArticle()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3CEADB7C-430A-4F69-A607-5265009CA7D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Core/DI/Injection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "provideArticle()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "636E5EC1-2FCE-4710-9D11-3E350E72EE5A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Core/DI/Injection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "provideArticle()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9AF86A95-6E01-430C-AA3D-04640CFE385C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Core/DI/Injection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "provideArticle()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11FD4CE6-02FF-47ED-BEF7-0DA869B89D07"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Core/DI/Injection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "provideArticle()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A9DA1CE-F2C0-40A7-A939-E6C49B9E18F7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Core/DI/Injection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "provideArticle()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "899DF2E9-373F-42CF-9ECA-06543D2CD7B8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Core/DI/Injection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "provideArticle()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00293D40-92F7-4422-9C17-057E53289E33"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/App/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "scene(_:willConnectTo:options:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

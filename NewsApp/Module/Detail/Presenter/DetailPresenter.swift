@@ -13,7 +13,7 @@ class DetailPresenter: ObservableObject {
   private var cancellables: Set<AnyCancellable> = []
   private let detailUseCase: DetailUseCase
   
-  @Published var article: ArticleModel 
+  @Published var article: ArticleModelOld 
   @Published var errorMessage: String = ""
   @Published var isLoading: Bool = false
   
