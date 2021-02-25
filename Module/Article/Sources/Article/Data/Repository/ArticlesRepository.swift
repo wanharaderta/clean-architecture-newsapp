@@ -18,7 +18,7 @@ where
   ArticlesRemoteDataSource.Response == [ArticleResponse],
   Transformer.Response == [ArticleResponse],
   Transformer.Entity == [ArticleEntity],
-  Transformer.Domain == [ArticleModel]{
+  Transformer.Domain == [ArticleModel] {
 
   public typealias Request = String
   public typealias Response = [ArticleModel]

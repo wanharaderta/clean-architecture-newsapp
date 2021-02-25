@@ -9,9 +9,9 @@ import SwiftUI
 
 class FavoriteRouter {
   
-  func makeDetailView(for article: ArticleModelOld) -> some View {
-    let detailUseCase = Injection.init().provideDetail(article: article)
-    let presenter = DetailPresenter(useCase: detailUseCase)
-    return DetailView(presenter: presenter)
-  }
+//  func makeDetailView(for article: ArticleModelOld) -> some View {
+//    let detailUseCase = Injection.init().provideDetail(article: article)
+//    let presenter = DetailPresenterOld(useCase: detailUseCase)
+//    return DetailView(presenter: presenter)
+//  }
 }

@@ -39,9 +39,9 @@ class FavoritePresenter: ObservableObject {
       }).store(in: &cancellables)
   }
   
-  func linkBuilder(
-      for article: ArticleModelOld
-  ) -> some View {
-      return router.makeDetailView(for: article)
-  }
+//  func linkBuilder(
+//      for article: ArticleModelOld
+//  ) -> some View {
+//      return router.makeDetailView(for: article)
+//  }
 }

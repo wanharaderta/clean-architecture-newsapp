@@ -46,9 +46,9 @@ class HomePresenter: ObservableObject {
     currentDate = dateString
   }
   
-  func linkBuilder(
-      for article: ArticleModelOld
-  ) -> some View {
-      return router.makeDetailView(for: article)
-  }
+//  func linkBuilder(
+//      for article: ArticleModelOld
+//  ) -> some View {
+//      return router.makeDetailView(for: article)
+//  }
 }

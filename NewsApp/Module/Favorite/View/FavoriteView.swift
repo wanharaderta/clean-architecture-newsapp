@@ -69,7 +69,7 @@ struct FavoriteView: View {
       }
     }
     .sheet(item: $articleSelected) { item in
-      self.presenter.linkBuilder(for: item)
+//      self.presenter.linkBuilder(for: item)
     }
     .background(Color.white)
   }

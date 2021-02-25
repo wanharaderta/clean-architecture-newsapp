@@ -7,18 +7,20 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import Article
 
 struct DetailView: View {
   
   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-  @ObservedObject var presenter: DetailPresenter
+  //@ObservedObject var presenter: DetailPresenterOld
+  var article: ArticleModel
   
   var body: some View {
     VStack {
       ZStack(alignment: .top) {
         ScrollView(.vertical, showsIndicators: false) {
           ZStack(alignment: .top) {
-            WebImage(url: URL(string: self.presenter.article.urlToImage))
+            WebImage(url: URL(string: self.article.urlToImage))
               .resizable()
               .frame(height: 320)
             HStack {
@@ -32,8 +34,11 @@ struct DetailView: View {
               .padding(.leading, 10)
               .padding(.top, 25)
               Spacer()
-              if self.presenter.article.favorite {
-                Button(action: { self.presenter.unFavorite() }) {
+              if self.article.favorite {
+                Button(action: {
+                        //self.presenter.unFavorite()
+                  
+                }) {
                   Image(systemName: "suit.heart.fill")
                     .foregroundColor(.red)
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 12)
@@ -42,7 +47,10 @@ struct DetailView: View {
                 .padding(.top, 40)
                 .padding(.trailing, 10)
               } else {
-                Button(action: { self.presenter.addfavorite() }) {
+                Button(action: {
+                        //self.presenter.addfavorite()
+                  
+                }) {
                   Image(systemName: "suit.heart")
                     .foregroundColor(.red)
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 12)
@@ -54,7 +62,7 @@ struct DetailView: View {
             }
           }.clipShape(CustomShape(corner: .bottomLeft, radii: 35))
           HStack {
-            Text(self.presenter.article.title)
+            Text(self.article.title)
               .font(.title2)
               .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             Spacer()
@@ -67,7 +75,7 @@ struct DetailView: View {
                 Text("Description").font(.headline)
                 Spacer()
               }
-              Text("\(self.presenter.article.description) \(self.presenter.article.content)")
+              Text("\(self.article.description) \(self.article.content)")
                 .multilineTextAlignment(.leading)
                 .foregroundColor(.gray)
                 .padding(.top, 10)
@@ -81,7 +89,7 @@ struct DetailView: View {
                 Spacer()
               }
               HStack {
-                Text(self.presenter.article.author)
+                Text(self.article.author)
                   .foregroundColor(Color.blue)
                   .padding(.top, 10)
                 Spacer()
@@ -96,7 +104,7 @@ struct DetailView: View {
                 Spacer()
               }
               HStack {
-                Text(self.presenter.article.sourceName)
+                Text(self.article.sourceName)
                   .foregroundColor(Color.blue)
                   .padding(.top, 10)
                 Spacer()
@@ -107,8 +115,6 @@ struct DetailView: View {
         }
       }
       Spacer()
-    }.onAppear {
-      self.presenter.getArticle()
     }
     .edgesIgnoringSafeArea(.all)
     .statusBar(hidden: true)

@@ -31,9 +31,9 @@ struct HomeView: View {
         })
         
         Spacer(minLength: 0)
-//        Text(self.presenter.currentDate)
-//          .font(.body)
-//          .foregroundColor(.gray)
+        Text(self.presenter.currentDate)
+          .font(.body)
+          .foregroundColor(.gray)
       }.padding()
       
       ScrollView(.vertical, showsIndicators: false, content: {
@@ -79,7 +79,7 @@ struct HomeView: View {
         }.padding()
       })
     }.sheet(item: $articleSelected) { item in
-      //self.presenter.linkBuilder(for: item)
+      self.linkBuilder(for: item)
     }
     .alert(isPresented: $showingAlert) {
       Alert(
@@ -88,5 +88,11 @@ struct HomeView: View {
         dismissButton: .default(Text("OK"))
       )
     }.background(Color.white)
+  }
+  
+  func linkBuilder(
+      for article: ArticleModel
+  ) -> some View {
+      return HomeRouter().makeDetailView(for: article)
   }
 }
