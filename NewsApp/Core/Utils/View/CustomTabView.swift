@@ -12,7 +12,10 @@ import Article
 struct CustomTabView: View {
   
   var tabs = ["home", "favorite", "about"]
-  var homePresenter: GetListPresenter<Any, ArticleModel, Interactor<Any, [ArticleModel], ArticlesRepository<ArticlesLocaleDataSource, ArticlesRemoteDataSource, ArticlesTransformer>>>
+  var articlePresenter: ArticlePresenter<Interactor<String,[ArticleModel],ArticlesRepository<
+                                                                        ArticlesLocaleDataSource,
+                                                                        ArticlesRemoteDataSource,
+                                                                        ArticlesTransformer>>>
   var favoritePresenter: FavoritePresenter
   var aboutPresenter: AboutPresenter
   
@@ -21,7 +24,7 @@ struct CustomTabView: View {
   var body: some View {
     ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
       TabView(selection: $selectedtab) {
-        HomeView(presenter: homePresenter)
+        HomeView(presenter: articlePresenter)
           .tag("home")
         FavoriteView(presenter: favoritePresenter)
           .tag("favorite")

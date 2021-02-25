@@ -15,7 +15,6 @@
 		8305CF5C25DD27D700A4E358 /* ArticleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305CF5B25DD27D700A4E358 /* ArticleRow.swift */; };
 		8305CF6425DD2D5D00A4E358 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8305CF6325DD2D5D00A4E358 /* SDWebImageSwiftUI */; };
 		836A364B25DD54F800EC863D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A364A25DD54F800EC863D /* DetailView.swift */; };
-		836A364E25DD562000EC863D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A364D25DD562000EC863D /* Constants.swift */; };
 		836A365225DD568300EC863D /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A365125DD568300EC863D /* CustomShape.swift */; };
 		836A365625DD8B8E00EC863D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A365525DD8B8E00EC863D /* ActivityIndicator.swift */; };
 		836A365B25DD8F2500EC863D /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A365A25DD8F2500EC863D /* DetailInteractor.swift */; };
@@ -51,7 +50,7 @@
 		8379FA2725DADF1100921BF4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8379FA2625DADF1100921BF4 /* Realm */; };
 		83BDF65F25E6A5E4001CFE4E /* Article in Frameworks */ = {isa = PBXBuildFile; productRef = 83BDF65E25E6A5E4001CFE4E /* Article */; };
 		83BDF66125E6A5E7001CFE4E /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 83BDF66025E6A5E7001CFE4E /* Core */; };
-		83E5B8E625DE3E3A00438CF3 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5B8E525DE3E3A00438CF3 /* Date+Ext.swift */; };
+		83DA0A6625E79D7200F1079A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA0A6525E79D7200F1079A /* Constants.swift */; };
 		83E5B8F725DED2C100438CF3 /* FavoriteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5B8F625DED2C100438CF3 /* FavoriteRow.swift */; };
 		83E5B8FC25DED48700438CF3 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5B8FB25DED48700438CF3 /* FavoriteRouter.swift */; };
 /* End PBXBuildFile section */
@@ -65,7 +64,6 @@
 		8305CF5B25DD27D700A4E358 /* ArticleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRow.swift; sourceTree = "<group>"; };
 		83398C2025E557E900051EB7 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Core; path = Module/Core; sourceTree = "<group>"; };
 		836A364A25DD54F800EC863D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		836A364D25DD562000EC863D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		836A365125DD568300EC863D /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
 		836A365525DD8B8E00EC863D /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		836A365A25DD8F2500EC863D /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
@@ -98,7 +96,7 @@
 		8379FA0725DADC1500921BF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8379FA0925DADC1500921BF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83BDF65725E5FFB3001CFE4E /* Article */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Article; path = Module/Article; sourceTree = "<group>"; };
-		83E5B8E525DE3E3A00438CF3 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		83DA0A6525E79D7200F1079A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Module/Core/Sources/Core/Utils/Constants.swift; sourceTree = SOURCE_ROOT; };
 		83E5B8F625DED2C100438CF3 /* FavoriteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRow.swift; sourceTree = "<group>"; };
 		83E5B8FB25DED48700438CF3 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -253,10 +251,10 @@
 		8372C48225DC117F006C2577 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				83DA0A6525E79D7200F1079A /* Constants.swift */,
 				8305CF5A25DD27BA00A4E358 /* View */,
 				8372C48A25DC164E006C2577 /* Extensions */,
 				8372C48325DC118D006C2577 /* Network */,
-				836A364D25DD562000EC863D /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -272,7 +270,6 @@
 		8372C48A25DC164E006C2577 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				83E5B8E525DE3E3A00438CF3 /* Date+Ext.swift */,
 				8374922B25E0C9CF00AFAA89 /* Realm+Ext.swift */,
 			);
 			path = Extensions;
@@ -614,7 +611,6 @@
 				8372C4B225DC244C006C2577 /* HomeRouter.swift in Sources */,
 				836E3D9625DF740F00DD9424 /* AboutPresenter.swift in Sources */,
 				836A364B25DD54F800EC863D /* DetailView.swift in Sources */,
-				836A364E25DD562000EC863D /* Constants.swift in Sources */,
 				8305CF5625DCF11C00A4E358 /* AboutView.swift in Sources */,
 				836A365225DD568300EC863D /* CustomShape.swift in Sources */,
 				836A367125DDA35E00EC863D /* FavoriteInteractor.swift in Sources */,
@@ -624,7 +620,6 @@
 				8379FA0025DADC1300921BF4 /* ContentView.swift in Sources */,
 				836A366E25DDA34900EC863D /* FavoriteUseCase.swift in Sources */,
 				8372C49125DC186D006C2577 /* RemoteDataSource.swift in Sources */,
-				83E5B8E625DE3E3A00438CF3 /* Date+Ext.swift in Sources */,
 				8372C4AE25DC23D5006C2577 /* HomePresenter.swift in Sources */,
 				8372C47625DBCB39006C2577 /* ArticlesRepositoryImpl.swift in Sources */,
 				8372C49825DC1D1A006C2577 /* ArticleModelOld.swift in Sources */,
@@ -642,6 +637,7 @@
 				83E5B8F725DED2C100438CF3 /* FavoriteRow.swift in Sources */,
 				8305CF5325DCF0BC00A4E358 /* FavoriteView.swift in Sources */,
 				8372C4A525DC2243006C2577 /* HomeUseCase.swift in Sources */,
+				83DA0A6625E79D7200F1079A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +781,7 @@
 				DEVELOPMENT_TEAM = UPCX9GY2XM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "NewsApp/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -806,6 +803,7 @@
 				DEVELOPMENT_TEAM = UPCX9GY2XM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "NewsApp/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

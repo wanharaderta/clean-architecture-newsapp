@@ -12,7 +12,7 @@ import Alamofire
 
 public struct ArticlesRemoteDataSource: DataSource {
   
-  public typealias Request = Any
+  public typealias Request = String
   public typealias Response = [ArticleResponse]
   
   private let _endpoint: String
@@ -21,7 +21,7 @@ public struct ArticlesRemoteDataSource: DataSource {
     _endpoint = endpoint
   }
 
-  public func execute(request: Any?) -> AnyPublisher<[ArticleResponse], Error> {
+  public func execute(request: String?) -> AnyPublisher<[ArticleResponse], Error> {
     return Future<[ArticleResponse], Error> { completion in
       if let url = URL(string: _endpoint) {
         AF.request(url)

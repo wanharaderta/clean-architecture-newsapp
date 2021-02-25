@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class DetailPresenter: ObservableObject {
+class DetailPresenterOld: ObservableObject {
   
   private var cancellables: Set<AnyCancellable> = []
   private let detailUseCase: DetailUseCase

@@ -17,25 +17,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              willConnectTo session: UISceneSession,
              options connectionOptions: UIScene.ConnectionOptions) {
     
-    let injection = Injection()
-    
-    let homeUseCase: Interactor<
-      Any,
-      [ArticleModel],
-      ArticlesRepository<
-        ArticlesLocaleDataSource,
-        ArticlesRemoteDataSource,
-        ArticlesTransformer>
-    > = injection.provideArticle()
-    
+    let articleUseCase: Interactor<String, [ArticleModel], ArticlesRepository <
+                                    ArticlesLocaleDataSource,
+                                    ArticlesRemoteDataSource,
+                                    ArticlesTransformer>
+    > = Injection.init().provideArticle()
+
     let favoriteUseCase = Injection.init().provideFavorite()
     
-    let homePresenter = GetListPresenter(useCase: homeUseCase)
+    let articlePresenter = ArticlePresenter(articleUseCase: articleUseCase)
     let favoritePresenter = FavoritePresenter(useCase: favoriteUseCase)
     let aboutPresenter = AboutPresenter()
     
     let contentView = ContentView()
-      .environmentObject(homePresenter)
+      .environmentObject(articlePresenter)
       .environmentObject(favoritePresenter)
       .environmentObject(aboutPresenter)
     

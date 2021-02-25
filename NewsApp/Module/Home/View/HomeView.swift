@@ -11,7 +11,10 @@ import Core
 
 struct HomeView: View {
   
-  @ObservedObject var presenter: GetListPresenter<Any, ArticleModel, Interactor<Any, [ArticleModel], ArticlesRepository<ArticlesLocaleDataSource, ArticlesRemoteDataSource, ArticlesTransformer>>>
+  @ObservedObject var presenter: ArticlePresenter<Interactor<String, [ArticleModel], ArticlesRepository<
+                                                                                  ArticlesLocaleDataSource,
+                                                                                  ArticlesRemoteDataSource,
+                                                                                  ArticlesTransformer>>>
   @State private var articleSelected: ArticleModel? = nil
   @State private var showingAlert = false
   @State var querySearch = ""
@@ -59,7 +62,7 @@ struct HomeView: View {
                 }
               } else {
                 VStack {
-                  ForEach(self.presenter.list, id: \.id) { item in
+                  ForEach(self.presenter.articles, id: \.id) { item in
                     ArticleRow(item: item).onTapGesture {
                       self.articleSelected = item
                     }
@@ -69,8 +72,8 @@ struct HomeView: View {
             }
             .padding(.top, 15)
           }.onAppear {
-            if self.presenter.list.count == 0 {
-              self.presenter.getList(request: nil)
+            if self.presenter.articles.count == 0 {
+              self.presenter.getArticles(request: "")
             }
           }
         }.padding()

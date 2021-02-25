@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     realm = try? Realm()
-    print("realm \(realm)")
     return true
   }
 
