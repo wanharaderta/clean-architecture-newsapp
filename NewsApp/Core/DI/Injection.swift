@@ -55,11 +55,11 @@ import Core
 
 final class Injection: NSObject {
   
-  func provideArticle<U: UseCase>() -> U where U.Request == String, U.Response == [ArticleModel] {
+  func provideArticles<U: UseCase>() -> U where U.Request == String, U.Response == [ArticleModel] {
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-         fatalError("no Application Delegate found")
+         fatalError(errorMessageDelegate)
     }
-    let locale = ArticlesLocaleDataSource(realm: appDelegate.realm)
+    let locale = ArticlesLocaleDataSourceImpl(realm: appDelegate.realm)
     let remote = ArticlesRemoteDataSource(endpoint: Endpoints.Gets.news.url)
     let mapper = ArticlesTransformer()
     let repository = ArticlesRepository(
@@ -67,14 +67,44 @@ final class Injection: NSObject {
       remoteDataSource: remote,
       mapper: mapper)
     guard let interactor = Interactor(repository: repository) as? U else {
-      fatalError("Duh....")
+      fatalError(errorMessageInteractor)
+    }
+    return interactor
+  }
+  
+  func provideDetail<U: UseCase>() -> U where U.Request == ArticleModel, U.Response == Bool {
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+         fatalError(errorMessageDelegate)
+    }
+    let locale = ArticleDetailLocaleDataSourceImpl(realm: appDelegate.realm)
+    let mapper = DetailTransformer()
+    let repository = DetailRepository(
+      locale: locale,
+      mapper: mapper)
+    guard let interactor = Interactor(repository: repository) as? U else {
+      fatalError(errorMessageInteractor)
+    }
+    return interactor
+  }
+  
+  func provideArticle<U: UseCase>() -> U where U.Request == String, U.Response == ArticleModel {
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+         fatalError(errorMessageDelegate)
+    }
+    let locale = ArticleLocaleDataSourceImpl(realm: appDelegate.realm)
+    let mapper = ArticleTransformer()
+    let repository = ArticleRepository(
+      locale: locale,
+      mapper: mapper)
+    guard let interactor = Interactor(repository: repository) as? U else {
+      fatalError(errorMessageInteractor)
     }
     return interactor
   }
   
   private func provideRepository() -> ArticlesRepositoryOld {
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-         fatalError("no Application Delegate found")
+         fatalError(errorMessageDelegate)
     }
     let remote: RemoteDataSource = RemoteDataSource.instance
     let locale: LocaleDataSourceOld = LocaleDataSourceOld.instance(appDelegate.realm)
@@ -84,13 +114,14 @@ final class Injection: NSObject {
     let repository = provideRepository()
     return HomeInteractor(repository: repository)
   }
-  func provideDetail(article: ArticleModelOld) -> DetailUseCase {
-    let repository = provideRepository()
-    return DetailInteractor(repository: repository, article: article)
-  }
+//  func provideDetail(article: ArticleModel) -> DetailUseCase {
+//    let repository = provideRepository()
+//    return DetailInteractorOld(repository: repository, article: article)
+//  }
   func provideFavorite() -> FavoriteUseCase {
     let repository = provideRepository()
     return FavoriteInteractor(repository: repository)
   }
 }
+
 

@@ -28,30 +28,30 @@ extension ArticlesRepositoryImpl: ArticlesRepositoryOld {
 
   func getArticles() -> AnyPublisher<[ArticleModelOld], Error> {
     return self.remote.getArticles()
-      .map { ArticleMapper.mapArticleResponseToDomain(input: $0) }
+      .map { ArticleMapperOld.mapArticleResponseToDomain(input: $0) }
       .eraseToAnyPublisher()
   }
   
   func getFavoriteArticles() -> AnyPublisher<[ArticleModelOld], Error> {
     return self.locale.getFavoriteArticles()
-      .map { ArticleMapper.mapArticleEntitiesToDomain(input: $0) }
+      .map { ArticleMapperOld.mapArticleEntitiesToDomain(input: $0) }
       .eraseToAnyPublisher()
   }
   
   func getArticle(by title: String) -> AnyPublisher<ArticleModelOld, Error> {
     return self.locale.getArticle(by: title)
-      .map { ArticleMapper.mapArticleEntityToDomain(input: $0) }
+      .map { ArticleMapperOld.mapArticleEntityToDomain(input: $0) }
       .eraseToAnyPublisher()
   }
   
   func addFavoriteArticle(from article: ArticleModelOld) -> AnyPublisher<Bool, Error> {
-    let artc  = ArticleMapper.mapArticleDomainToEntity(input: article)
+    let artc  = ArticleMapperOld.mapArticleDomainToEntity(input: article)
     return self.locale.addFavoriteArticle(from: artc)
       .eraseToAnyPublisher()
   }
   
   func removeFavoriteArticle(from article: ArticleModelOld) -> AnyPublisher<Bool, Error> {
-    let artc  = ArticleMapper.mapArticleDomainToEntity(input: article)
+    let artc  = ArticleMapperOld.mapArticleDomainToEntity(input: article)
     return self.locale.removeFavoriteArticle(from: artc)
       .eraseToAnyPublisher()
   }

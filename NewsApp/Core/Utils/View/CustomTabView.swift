@@ -12,8 +12,8 @@ import Article
 struct CustomTabView: View {
   
   var tabs = ["home", "favorite", "about"]
-  var articlePresenter: ArticlePresenter<Interactor<String,[ArticleModel],ArticlesRepository<
-                                                                        ArticlesLocaleDataSource,
+  var articlePresenter: ArticlePresenter<Interactor<String,[ArticleModel], ArticlesRepository<
+                                                                        ArticlesLocaleDataSourceImpl,
                                                                         ArticlesRemoteDataSource,
                                                                         ArticlesTransformer>>>
   var favoritePresenter: FavoritePresenter

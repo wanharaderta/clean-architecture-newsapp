@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class DetailInteractor: DetailUseCase {
+class DetailInteractorOld: DetailUseCaseOld {
 
   private let repository: ArticlesRepositoryOld
   private let article: ArticleModelOld

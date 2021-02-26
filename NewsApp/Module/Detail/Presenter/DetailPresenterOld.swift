@@ -11,13 +11,13 @@ import Combine
 class DetailPresenterOld: ObservableObject {
   
   private var cancellables: Set<AnyCancellable> = []
-  private let detailUseCase: DetailUseCase
+  private let detailUseCase: DetailUseCaseOld
   
   @Published var article: ArticleModelOld 
   @Published var errorMessage: String = ""
   @Published var isLoading: Bool = false
   
-  init(useCase: DetailUseCase) {
+  init(useCase: DetailUseCaseOld) {
     self.detailUseCase = useCase
     article = detailUseCase.getArticle()
   }

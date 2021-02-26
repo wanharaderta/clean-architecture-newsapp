@@ -7,7 +7,7 @@
 
 import Combine
 
-protocol DetailUseCase {
+protocol DetailUseCaseOld {
 
   func getArticle() -> ArticleModelOld
   func getArticle() -> AnyPublisher<ArticleModelOld, Error>

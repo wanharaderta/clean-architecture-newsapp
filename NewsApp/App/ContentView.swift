@@ -23,7 +23,7 @@ struct ContentView: View {
   //        ArticlesTransformer>
   //    >>
   @EnvironmentObject var articlePresenter: ArticlePresenter<Interactor<String,[ArticleModel],ArticlesRepository<
-                                                                        ArticlesLocaleDataSource,
+                                                                        ArticlesLocaleDataSourceImpl,
                                                                         ArticlesRemoteDataSource,
                                                                         ArticlesTransformer>>>
   @EnvironmentObject var favoritePresenter: FavoritePresenter

@@ -10,11 +10,11 @@ import Foundation
 public let ARTICLEDUMMY: ArticleModel = ArticleModel(
   id: "1",
   author: "www.google.com",
-  sourceName: "Wanhar",
+  sourceName: "Google",
   title: "News",
-  urlToImage: "https://cutt.ly/ZlyjgoQ",
+  urlToImage: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
   content: "Lorem example",
-  description: "Lorem example", favorite: true
+  description: "Lorem example", favorite: false
 )
 
 

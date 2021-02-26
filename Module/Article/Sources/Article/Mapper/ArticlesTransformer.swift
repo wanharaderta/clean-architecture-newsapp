@@ -8,8 +8,11 @@
 import Foundation
 import Core
 
-public struct ArticlesTransformer: Mapper {
-  
+public protocol ArticlesMapper: Mapper {
+  func transformResponseToDomain(response: Response) -> Domain
+}
+
+public struct ArticlesTransformer: ArticlesMapper {
   public typealias Response = [ArticleResponse]
   public typealias Entity = [ArticleEntity]
   public typealias Domain = [ArticleModel]
@@ -29,4 +32,6 @@ public struct ArticlesTransformer: Mapper {
         favorite: false)
     }
   }
+  
+
 }

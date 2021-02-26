@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ArticleMapper {
+final class ArticleMapperOld {
   
   static func mapArticleResponseToDomain(
     input articleResponse: [ArticleResponse]

@@ -12,7 +12,7 @@ import Core
 struct HomeView: View {
   
   @ObservedObject var presenter: ArticlePresenter<Interactor<String, [ArticleModel], ArticlesRepository<
-                                                                                  ArticlesLocaleDataSource,
+                                                                                  ArticlesLocaleDataSourceImpl,
                                                                                   ArticlesRemoteDataSource,
                                                                                   ArticlesTransformer>>>
   @State private var articleSelected: ArticleModel? = nil

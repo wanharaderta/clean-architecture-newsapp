@@ -9,26 +9,26 @@ import Foundation
 import Core
 import Combine
 
-public class ArticlePresenter<ArticleUseCase: UseCase>: ObservableObject
-where ArticleUseCase.Request == String, ArticleUseCase.Response == [ArticleModel] {
+public class ArticlePresenter<ArticlesUseCase: UseCase>: ObservableObject
+where ArticlesUseCase.Request == String, ArticlesUseCase.Response == [ArticleModel] {
   
   private var cancellables: Set<AnyCancellable> = []
   
-  private let articleUseCase: ArticleUseCase
+  private let articlesUseCase: ArticlesUseCase
   
   @Published public var articles: [ArticleModel] = []
   @Published public var errorMessage: String = ""
   @Published public var currentDate: String = ""
   @Published public var isLoading: Bool = false
   
-  public init(articleUseCase: ArticleUseCase) {
-    self.articleUseCase = articleUseCase
+  public init(articlesUseCase: ArticlesUseCase) {
+    self.articlesUseCase = articlesUseCase
     getCurrentDate()
   }
   
-  public func getArticles(request: ArticleUseCase.Request) {
+  public func getArticles(request: ArticlesUseCase.Request) {
     isLoading = true
-    articleUseCase.execute(request: request)
+    articlesUseCase.execute(request: request)
       .receive(on: RunLoop.main)
       .sink(receiveCompletion: { completion in
         switch completion {

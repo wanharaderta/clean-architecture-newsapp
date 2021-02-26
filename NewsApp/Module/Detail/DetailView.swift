@@ -8,11 +8,18 @@
 import SwiftUI
 import SDWebImageSwiftUI
 import Article
+import Core
 
 struct DetailView: View {
   
   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-  //@ObservedObject var presenter: DetailPresenterOld
+  @ObservedObject var presenter: ArticleDetailPresenter<Interactor<ArticleModel, Bool, DetailRepository<
+                                                                    ArticleDetailLocaleDataSourceImpl,
+                                                                    DetailTransformer>>,
+                                                        Interactor<String, ArticleModel, ArticleRepository<
+                                                                    ArticleLocaleDataSourceImpl,
+                                                                    ArticleTransformer>>>
+  
   var article: ArticleModel
   
   var body: some View {
@@ -20,7 +27,7 @@ struct DetailView: View {
       ZStack(alignment: .top) {
         ScrollView(.vertical, showsIndicators: false) {
           ZStack(alignment: .top) {
-            WebImage(url: URL(string: self.article.urlToImage))
+            WebImage(url: URL(string: self.presenter.article.urlToImage))
               .resizable()
               .frame(height: 320)
             HStack {
@@ -34,11 +41,8 @@ struct DetailView: View {
               .padding(.leading, 10)
               .padding(.top, 25)
               Spacer()
-              if self.article.favorite {
-                Button(action: {
-                        //self.presenter.unFavorite()
-                  
-                }) {
+              if self.presenter.article.favorite {
+                Button(action: { self.presenter.updateFavorite() }) {
                   Image(systemName: "suit.heart.fill")
                     .foregroundColor(.red)
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 12)
@@ -47,10 +51,7 @@ struct DetailView: View {
                 .padding(.top, 40)
                 .padding(.trailing, 10)
               } else {
-                Button(action: {
-                        //self.presenter.addfavorite()
-                  
-                }) {
+                Button(action: { self.presenter.updateFavorite() }) {
                   Image(systemName: "suit.heart")
                     .foregroundColor(.red)
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 12)
@@ -62,7 +63,7 @@ struct DetailView: View {
             }
           }.clipShape(CustomShape(corner: .bottomLeft, radii: 35))
           HStack {
-            Text(self.article.title)
+            Text(self.presenter.article.title)
               .font(.title2)
               .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             Spacer()
@@ -75,7 +76,7 @@ struct DetailView: View {
                 Text("Description").font(.headline)
                 Spacer()
               }
-              Text("\(self.article.description) \(self.article.content)")
+              Text("\(self.presenter.article.description) \(self.presenter.article.content)")
                 .multilineTextAlignment(.leading)
                 .foregroundColor(.gray)
                 .padding(.top, 10)
@@ -89,7 +90,7 @@ struct DetailView: View {
                 Spacer()
               }
               HStack {
-                Text(self.article.author)
+                Text(self.presenter.article.author)
                   .foregroundColor(Color.blue)
                   .padding(.top, 10)
                 Spacer()
@@ -104,7 +105,7 @@ struct DetailView: View {
                 Spacer()
               }
               HStack {
-                Text(self.article.sourceName)
+                Text(self.presenter.article.sourceName)
                   .foregroundColor(Color.blue)
                   .padding(.top, 10)
                 Spacer()
@@ -115,6 +116,8 @@ struct DetailView: View {
         }
       }
       Spacer()
+    }.onAppear {
+      self.presenter.getArticle(request: article)
     }
     .edgesIgnoringSafeArea(.all)
     .statusBar(hidden: true)

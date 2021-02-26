@@ -12,13 +12,13 @@ import Core
 public struct ArticlesRepository<
   ArticlesLocaleDataSource: LocaleDataSource,
   ArticlesRemoteDataSource: DataSource,
-  Transformer: Mapper> : Repository
+  Transformer: ArticlesMapper> : Repository
 where
   ArticlesLocaleDataSource.Response == ArticleEntity,
   ArticlesRemoteDataSource.Response == [ArticleResponse],
   Transformer.Response == [ArticleResponse],
   Transformer.Entity == [ArticleEntity],
-  Transformer.Domain == [ArticleModel] {
+  Transformer.Domain == [ArticleModel]{
 
   public typealias Request = String
   public typealias Response = [ArticleModel]
