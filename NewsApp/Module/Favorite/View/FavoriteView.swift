@@ -35,7 +35,7 @@ struct FavoriteView: View {
                 .fontWeight(.bold)
               Spacer()
             }.padding()
-            if presenter.articles.count == 0 {
+            if presenter.articles.isEmpty {
               Spacer()
               HStack {
                 Spacer()

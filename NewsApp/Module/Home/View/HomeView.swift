@@ -47,7 +47,7 @@ struct HomeView: View {
             Image(systemName: "magnifyingglass")
               .foregroundColor(Color(.systemGray3))
             TextField("Search for topics, sources", text: self.$presenter.searchTemp,
-                      onEditingChanged: {_ in } ){ self.presenter.searchArticle() }
+                      onEditingChanged: {_ in }) { self.presenter.searchArticle() }
             if self.presenter.searchTemp != "" {
               Image(systemName: "xmark.circle.fill")
                 .imageScale(.medium)
@@ -85,7 +85,7 @@ struct HomeView: View {
             }
             .padding(.top, 15)
           }.onAppear {
-            if self.presenter.articles.count == 0 {
+            if self.presenter.articles.isEmpty {
               self.presenter.getArticles()
             }
           }
