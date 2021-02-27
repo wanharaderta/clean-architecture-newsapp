@@ -86,9 +86,13 @@ struct HomeView: View {
                         .font(.title)
                         .fontWeight(.semibold)
                         .padding()
-                      Button("Refresh") {
-                        self.presenter.getArticles()
-                      }.padding()
+                      Button("Refresh") {self.presenter.getArticles()}
+                        .foregroundColor(.white)
+                        .background(Color.blue.opacity(0.5))
+                        .cornerRadius(8.0)
+                        .frame(width: 100)
+                        .padding()
+                        .padding(.bottom, 50)
                     }
                     Spacer()
                   }
