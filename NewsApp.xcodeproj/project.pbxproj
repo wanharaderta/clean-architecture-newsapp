@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -405,7 +405,7 @@
 		8379F9F025DADC1300921BF4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
+				BuildIndependentTargetsInParallel = NO;
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
@@ -768,7 +768,7 @@
 				DEVELOPMENT_TEAM = UPCX9GY2XM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "NewsApp/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -790,7 +790,7 @@
 				DEVELOPMENT_TEAM = UPCX9GY2XM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "NewsApp/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

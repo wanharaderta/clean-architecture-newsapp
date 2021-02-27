@@ -74,13 +74,34 @@ struct HomeView: View {
                   ActivityIndicator()
                 }
               } else {
-                VStack {
-                  ForEach(self.presenter.articles, id: \.id) { item in
-                    ArticleRow(item: item).onTapGesture {
-                      self.articleSelected = item
+                if self.presenter.articles.isEmpty {
+                  Spacer()
+                  HStack {
+                    Spacer()
+                    VStack {
+                      Image("news")
+                        .resizable()
+                        .frame(width: 150, height: 150, alignment: .center)
+                      Text("News not available")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .padding()
+                      Button("Refresh") {
+                        self.presenter.getArticles()
+                      }.padding()
                     }
+                    Spacer()
                   }
-                }.padding(.bottom, 120)
+                  Spacer()
+                } else {
+                  VStack {
+                    ForEach(self.presenter.articles, id: \.id) { item in
+                      ArticleRow(item: item).onTapGesture {
+                        self.articleSelected = item
+                      }
+                    }
+                  }.padding(.bottom, 120)
+                }
               }
             }
             .padding(.top, 15)
