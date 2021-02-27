@@ -87,12 +87,12 @@ struct HomeView: View {
                         .fontWeight(.semibold)
                         .padding()
                       Button("Refresh") {self.presenter.getArticles()}
+                        .padding(7)
                         .foregroundColor(.white)
                         .background(Color.blue.opacity(0.5))
-                        .cornerRadius(8.0)
+                        .cornerRadius(15)
                         .frame(width: 100)
-                        .padding()
-                        .padding(.bottom, 50)
+                       
                     }
                     Spacer()
                   }
