@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "837B3C2325E210E900D65FAE"
-               BuildableName = "TriangleApp.app"
-               BlueprintName = "TriangleApp"
-               ReferencedContainer = "container:TriangleApp.xcodeproj">
+               BuildableName = "NewsApp.app"
+               BlueprintName = "NewsApp"
+               ReferencedContainer = "container:NewsApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,12 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "837B3C3925E210EA00D65FAE"
-               BuildableName = "TriangleAppTests.xctest"
-               BlueprintName = "TriangleAppTests"
-               ReferencedContainer = "container:TriangleApp.xcodeproj">
+               BuildableName = "
+NewsAppTests.xctest"
+               BlueprintName = "
+NewsAppTests"
+               ReferencedContainer = "container:
+NewsApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +46,12 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "837B3C4425E210EA00D65FAE"
-               BuildableName = "TriangleAppUITests.xctest"
-               BlueprintName = "TriangleAppUITests"
-               ReferencedContainer = "container:TriangleApp.xcodeproj">
+               BuildableName = "
+NewsAppUITests.xctest"
+               BlueprintName = "
+NewsAppUITests"
+               ReferencedContainer = "container:
+NewsApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +71,12 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "837B3C2325E210E900D65FAE"
-            BuildableName = "TriangleApp.app"
-            BlueprintName = "TriangleApp"
-            ReferencedContainer = "container:TriangleApp.xcodeproj">
+            BuildableName = "
+NewsApp.app"
+            BlueprintName = "
+NewsApp"
+            ReferencedContainer = "container:
+NewsApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -82,9 +91,12 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "837B3C2325E210E900D65FAE"
-            BuildableName = "TriangleApp.app"
-            BlueprintName = "TriangleApp"
-            ReferencedContainer = "container:TriangleApp.xcodeproj">
+            BuildableName = "
+NewsApp.app"
+            BlueprintName = "
+NewsApp"
+            ReferencedContainer = "container:
+NewsApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
