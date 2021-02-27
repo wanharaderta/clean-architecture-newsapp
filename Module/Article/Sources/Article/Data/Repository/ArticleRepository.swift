@@ -39,6 +39,4 @@ where
       .map { _mapper.transformEntityToDomain(entity: $0)}
       .eraseToAnyPublisher()
   }
-  
-
 }

@@ -7,22 +7,21 @@
 
 import SwiftUI
 import SwiftUIRefresh
+import Article
+import Core
 
 struct FavoriteView: View {
   
-  @ObservedObject var presenter: FavoritePresenter
-  @State private var articleSelected: ArticleModelOld? = nil
+  @ObservedObject var presenter: ArticleFavoritePresenter<Interactor<String, [ArticleModel], ArticleFavoriteRepository<
+                                                                      ArticlesLocaleDataSourceImpl,
+                                                                      ArticlesTransformer>>>
+  
+  @State private var articleSelected: ArticleModel? = nil
   @State private var isShowing = false
   
   var body: some View {
     ZStack {
       VStack {
-        HStack {
-          Text("Favorite")
-            .font(.largeTitle)
-            .fontWeight(.bold)
-          Spacer()
-        }
         if presenter.isLoading {
           VStack {
             Text("Loading...")
@@ -30,6 +29,12 @@ struct FavoriteView: View {
           }
         } else {
           List {
+            HStack {
+              Text("Favorite")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+              Spacer()
+            }.padding()
             if presenter.articles.count == 0 {
               Spacer()
               HStack {
@@ -48,29 +53,58 @@ struct FavoriteView: View {
               Spacer()
             } else {
               VStack {
+                HStack {
+                  Image(systemName: "magnifyingglass")
+                    .foregroundColor(Color(.systemGray3))
+                  TextField("Search...", text: self.$presenter.searchTemp,
+                            onEditingChanged: {_ in } ){ self.presenter.searchArticle() }
+                  if self.presenter.searchTemp != "" {
+                    Image(systemName: "xmark.circle.fill")
+                      .imageScale(.medium)
+                      .foregroundColor(Color(.systemGray3))
+                      .padding(2)
+                      .onTapGesture {
+                        withAnimation {
+                          self.presenter.searchTemp = ""
+                          self.presenter.getFavorites()
+                        }
+                      }
+                  }
+                }.padding(12)
+                .background(Color(.systemGray6))
+                .cornerRadius(10)
+                .clipShape(Capsule())
+                .padding(.vertical, 10)
+                
                 ForEach(self.presenter.articles, id: \.id) { item in
-//                  ArticleRow(item: item).onTapGesture {
-//                    self.articleSelected = item
-//                  }
+                  ArticleRow(item: item).onTapGesture {
+                    self.articleSelected = item
+                  }
                 }
               }.padding(.bottom, 120)
             }
           }.pullToRefresh(isShowing: $isShowing) {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-              self.presenter.getFavorite()
+              self.presenter.getFavorites()
               self.isShowing = false
             }
           }
         }
-      }.padding()
-    }.onAppear {
-      if self.presenter.articles.count == 0 {
-        self.presenter.getFavorite()
       }
-    }
+    }.background(Color.white)
     .sheet(item: $articleSelected) { item in
-//      self.presenter.linkBuilder(for: item)
+      self.linkBuilder(for: item)
     }
-    .background(Color.white)
+    .onAppear {
+      self.presenter.getFavorites()
+    }
+    
+  }
+  
+  func linkBuilder(
+    for article: ArticleModel
+  ) -> some View {
+    return FavoriteRouter().makeDetailView(for: article)
+    
   }
 }

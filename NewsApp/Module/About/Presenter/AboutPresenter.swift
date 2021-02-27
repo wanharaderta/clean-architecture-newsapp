@@ -4,7 +4,7 @@
 //
 //  Created by Wanhar on 19/02/21.
 //
-
+import Core
 import Foundation
 
 class AboutPresenter:  ObservableObject {

@@ -16,5 +16,3 @@ public let ARTICLEDUMMY: ArticleModel = ArticleModel(
   content: "Lorem example",
   description: "Lorem example", favorite: false
 )
-
-

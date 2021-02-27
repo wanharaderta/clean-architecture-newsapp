@@ -18,7 +18,7 @@ public struct DetailTransformer: DetailMapper {
   public typealias Domain = ArticleModel
   
   public init() {}
-  
+ 
   public func transformDomainToEntity(domain: ArticleModel) -> ArticleEntity {
     let articleEntity = ArticleEntity()
     articleEntity.itemId = domain.id

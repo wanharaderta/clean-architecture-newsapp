@@ -11,22 +11,13 @@ import Core
 
 struct ContentView: View {
   
-  //  @EnvironmentObject var homePresenter: GetListPresenter<
-  //    Any,
-  //    ArticleModel,
-  //    Interactor<
-  //      Any,
-  //      [ArticleModel],
-  //      ArticlesRepository<
-  //        ArticlesLocaleDataSource,
-  //        ArticlesRemoteDataSource,
-  //        ArticlesTransformer>
-  //    >>
   @EnvironmentObject var articlePresenter: ArticlePresenter<Interactor<String,[ArticleModel],ArticlesRepository<
                                                                         ArticlesLocaleDataSourceImpl,
                                                                         ArticlesRemoteDataSource,
                                                                         ArticlesTransformer>>>
-  @EnvironmentObject var favoritePresenter: FavoritePresenter
+  @EnvironmentObject var favoritesPresenter: ArticleFavoritePresenter<Interactor<String, [ArticleModel], ArticleFavoriteRepository<
+                                                                                  ArticlesLocaleDataSourceImpl,
+                                                                                  ArticlesTransformer>>>
   @EnvironmentObject var aboutPresenter: AboutPresenter
   
   var body: some View {
@@ -34,7 +25,7 @@ struct ContentView: View {
       
       CustomTabView(
         articlePresenter: articlePresenter,
-        favoritePresenter: favoritePresenter,
+        favoritesPresenter: favoritesPresenter,
         aboutPresenter: aboutPresenter)
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)

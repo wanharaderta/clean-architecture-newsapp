@@ -18,7 +18,7 @@ where
   ArticlesRemoteDataSource.Response == [ArticleResponse],
   Transformer.Response == [ArticleResponse],
   Transformer.Entity == [ArticleEntity],
-  Transformer.Domain == [ArticleModel]{
+  Transformer.Domain == [ArticleModel] {
 
   public typealias Request = String
   public typealias Response = [ArticleModel]
@@ -39,7 +39,7 @@ where
   
   public func execute(request: String?) -> AnyPublisher<[ArticleModel], Error> {
     return self._remote.execute(request: nil)
-      .map {  _mapper.transformResponseToDomain(response: $0) }
+      .map { _mapper.transformResponseToDomain(response: $0) }
       .eraseToAnyPublisher()
   }
 }

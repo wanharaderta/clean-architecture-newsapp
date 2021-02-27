@@ -12,12 +12,12 @@ import Core
 struct HomeView: View {
   
   @ObservedObject var presenter: ArticlePresenter<Interactor<String, [ArticleModel], ArticlesRepository<
-                                                                                  ArticlesLocaleDataSourceImpl,
-                                                                                  ArticlesRemoteDataSource,
-                                                                                  ArticlesTransformer>>>
+                                                              ArticlesLocaleDataSourceImpl,
+                                                              ArticlesRemoteDataSource,
+                                                              ArticlesTransformer>>>
   @State private var articleSelected: ArticleModel? = nil
   @State private var showingAlert = false
-  @State var querySearch = ""
+  
   var body: some View {
     return VStack {
       HStack {
@@ -43,15 +43,28 @@ struct HomeView: View {
             .fontWeight(.bold)
             .padding(.bottom, 30)
           
-          HStack(spacing: 15, content: {
+          HStack {
             Image(systemName: "magnifyingglass")
               .foregroundColor(Color(.systemGray3))
-            TextField("Search for topics, sources", text: $querySearch)
-          })
-          .padding(10)
-          .padding(.horizontal)
+            TextField("Search for topics, sources", text: self.$presenter.searchTemp,
+                      onEditingChanged: {_ in } ){ self.presenter.searchArticle() }
+            if self.presenter.searchTemp != "" {
+              Image(systemName: "xmark.circle.fill")
+                .imageScale(.medium)
+                .foregroundColor(Color(.systemGray3))
+                .padding(2)
+                .onTapGesture {
+                  withAnimation {
+                    self.presenter.searchTemp = ""
+                    self.presenter.getArticles()
+                  }
+                }
+            }
+          }.padding(12)
           .background(Color(.systemGray6))
+          .cornerRadius(10)
           .clipShape(Capsule())
+          .padding(.vertical, 10)
           
           ZStack {
             VStack {
@@ -73,7 +86,7 @@ struct HomeView: View {
             .padding(.top, 15)
           }.onAppear {
             if self.presenter.articles.count == 0 {
-              self.presenter.getArticles(request: "")
+              self.presenter.getArticles()
             }
           }
         }.padding()
@@ -91,8 +104,8 @@ struct HomeView: View {
   }
   
   func linkBuilder(
-      for article: ArticleModel
+    for article: ArticleModel
   ) -> some View {
-      return HomeRouter().makeDetailView(for: article)
+    return HomeRouter().makeDetailView(for: article)
   }
 }

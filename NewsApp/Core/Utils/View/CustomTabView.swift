@@ -16,7 +16,10 @@ struct CustomTabView: View {
                                                                         ArticlesLocaleDataSourceImpl,
                                                                         ArticlesRemoteDataSource,
                                                                         ArticlesTransformer>>>
-  var favoritePresenter: FavoritePresenter
+  
+  var favoritesPresenter: ArticleFavoritePresenter<Interactor<String, [ArticleModel], ArticleFavoriteRepository<
+                                                                ArticlesLocaleDataSourceImpl,
+                                                                ArticlesTransformer>>>
   var aboutPresenter: AboutPresenter
   
   @State var selectedtab = "home"
@@ -26,7 +29,7 @@ struct CustomTabView: View {
       TabView(selection: $selectedtab) {
         HomeView(presenter: articlePresenter)
           .tag("home")
-        FavoriteView(presenter: favoritePresenter)
+        FavoriteView(presenter: favoritesPresenter)
           .tag("favorite")
         AboutView(presenter: aboutPresenter)
           .tag("about")

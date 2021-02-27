@@ -44,7 +44,6 @@ where
     } else {
       return self._locale.add(entity: item)
         .eraseToAnyPublisher()
-    }
-   
+    }   
   }
 }

@@ -16,7 +16,7 @@ public struct ArticleTransformer: ArticleMapper {
   public typealias Response = ArticleResponse
   public typealias Entity = ArticleEntity
   public typealias Domain = ArticleModel
-  
+ 
   public init() {}
 
   public func transformEntityToDomain(entity: ArticleEntity) -> ArticleModel {

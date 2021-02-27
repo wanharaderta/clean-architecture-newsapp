@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Core
 import SDWebImageSwiftUI
 
 struct AboutView: View {
@@ -92,6 +93,7 @@ struct AboutView: View {
             }
             .padding(.top, 30)
           }
+          .padding(.bottom, 120)
           .padding()
         })
       }

@@ -11,11 +11,7 @@ import RealmSwift
 import Combine
 
 public protocol ArticleDetailLocaleDataSource: LocaleDataSource {
-  //func list(request: Request?) -> AnyPublisher<[Response], Error>
-//  func add(entities: [Response]) -> AnyPublisher<Bool, Error>
   func add(entity: Request) -> AnyPublisher<Bool, Error>
- // func get(itemId: String) -> AnyPublisher<Response, Error>
-//  func update(itemId: Int, entity: Response) -> AnyPublisher<Bool, Error>
   func delete(entity: Request) -> AnyPublisher<Bool, Error>
 }
 

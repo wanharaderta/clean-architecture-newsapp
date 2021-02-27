@@ -18,15 +18,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              options connectionOptions: UIScene.ConnectionOptions) {
     
     let articlesUseCase: Interactor<String, [ArticleModel], ArticlesRepository <
-                                    ArticlesLocaleDataSourceImpl,
-                                    ArticlesRemoteDataSource,
-                                    ArticlesTransformer>
+                                      ArticlesLocaleDataSourceImpl,
+                                      ArticlesRemoteDataSource,
+                                      ArticlesTransformer>
     > = Injection.init().provideArticles()
-
-    let favoriteUseCase = Injection.init().provideFavorite()
+    
+    let favoritesUseCase: Interactor<String, [ArticleModel], ArticleFavoriteRepository <
+                                      ArticlesLocaleDataSourceImpl,
+                                      ArticlesTransformer>
+    > = Injection.init().provideFavorites()
     
     let articlePresenter = ArticlePresenter(articlesUseCase: articlesUseCase)
-    let favoritePresenter = FavoritePresenter(useCase: favoriteUseCase)
+    let favoritePresenter = ArticleFavoritePresenter(favoritesUseCase: favoritesUseCase)
     let aboutPresenter = AboutPresenter()
     
     let contentView = ContentView()
