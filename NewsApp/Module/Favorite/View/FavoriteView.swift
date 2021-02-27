@@ -15,7 +15,7 @@ struct FavoriteView: View {
   @ObservedObject var presenter: ArticleFavoritePresenter<Interactor<String, [ArticleModel], ArticleFavoriteRepository<
                                                                       ArticlesLocaleDataSourceImpl,
                                                                       ArticlesTransformer>>>
-  
+  @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
   @State private var articleSelected: ArticleModel? = nil
   @State private var isShowing = false
   
@@ -77,8 +77,9 @@ struct FavoriteView: View {
                 .padding(.vertical, 10)
                 
                 ForEach(self.presenter.articles, id: \.id) { item in
-                  ArticleRow(item: item).onTapGesture {
+                  FavoriteRow(item: item).onTapGesture {
                     self.articleSelected = item
+                    print("showwwwww \(presentationMode.wrappedValue.isPresented)")
                   }
                 }
               }.padding(.bottom, 120)
@@ -93,18 +94,16 @@ struct FavoriteView: View {
       }
     }.background(Color.white)
     .sheet(item: $articleSelected) { item in
-      self.linkBuilder(for: item)
+      self.linkBuilder(for: item, isShowing: isShowing)
     }
     .onAppear {
       self.presenter.getFavorites()
     }
-    
   }
   
   func linkBuilder(
-    for article: ArticleModel
+    for article: ArticleModel, isShowing: Bool
   ) -> some View {
     return FavoriteRouter().makeDetailView(for: article)
-    
   }
 }

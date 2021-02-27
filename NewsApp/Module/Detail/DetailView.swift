@@ -19,7 +19,6 @@ struct DetailView: View {
                                                         Interactor<String, ArticleModel, ArticleRepository<
                                                                     ArticleLocaleDataSourceImpl,
                                                                     ArticleTransformer>>>
-  
   var article: ArticleModel
   
   var body: some View {

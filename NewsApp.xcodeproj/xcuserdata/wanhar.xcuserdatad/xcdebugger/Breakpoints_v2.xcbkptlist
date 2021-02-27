@@ -8,19 +8,19 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5AF12B52-1EE3-42BE-8D17-D65BA5E071D3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsApp/Module/Favorite/View/FavoriteView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "5AF12B52-1EE3-42BE-8D17-D65BA5E071D3 - cbeca8588af62e31"
+                  uuid = "5AF12B52-1EE3-42BE-8D17-D65BA5E071D3 - cbeca8588af62ef3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -30,12 +30,12 @@
                   urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Favorite/View/FavoriteView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "2857">
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "2989">
                </Location>
                <Location
-                  uuid = "5AF12B52-1EE3-42BE-8D17-D65BA5E071D3 - 94e58636991c999c"
+                  uuid = "5AF12B52-1EE3-42BE-8D17-D65BA5E071D3 - 94e58636991c9952"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,9 +45,9 @@
                   urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Favorite/View/FavoriteView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "22">
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "67">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -56,14 +56,221 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "17AF4B8D-744A-4964-8D5E-40D5E0E5BD24"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsApp/Module/Favorite/View/FavoriteView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35CC8538-659F-49D0-AE39-80D04606AEC2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Module/Favorite/View/FavoriteView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA6CC693-2700-4DA2-82E3-EFB834B70FE9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Module/Favorite/View/FavoriteView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7EE4FAE8-B93C-49CC-B6C7-5FC95358D60B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Module/Favorite/View/FavoriteView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "7EE4FAE8-B93C-49CC-B6C7-5FC95358D60B - 45f07ed958ce8910"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.Spacer)&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, NewsApp.ActivityIndicator)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUIRefresh):SwiftUI.View.pullToRefresh(isShowing: SwiftUI.Binding&lt;Swift.Bool&gt;, onRefresh: () -&gt; ()) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI._ConditionalContent&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, NewsApp.ActivityIndicator)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUIRefresh):SwiftUI.View.pullToRefresh(isShowing: SwiftUI.Binding&lt;Swift.Bool&gt;, onRefresh: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;&gt; in NewsApp.FavoriteView.body.getter : some"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Favorite/View/FavoriteView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "4517">
+               </Location>
+               <Location
+                  uuid = "7EE4FAE8-B93C-49CC-B6C7-5FC95358D60B - 95034505b4e9fedc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.ForEach&lt;Swift.Array&lt;Article.ArticleModel&gt;, Swift.String, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #2 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.Spacer)&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, NewsApp.ActivityIndicator)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUIRefresh):SwiftUI.View.pullToRefresh(isShowing: SwiftUI.Binding&lt;Swift.Bool&gt;, onRefresh: () -&gt; ()) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI._ConditionalContent&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, NewsApp.ActivityIndicator)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUIRefresh):SwiftUI.View.pullToRefresh(isShowing: SwiftUI.Binding&lt;Swift.Bool&gt;, onRefresh: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;&gt; in NewsApp.FavoriteView.body.getter : some"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Favorite/View/FavoriteView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "2478">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD18F8B4-754D-4200-8447-3852187AE46F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Module/Favorite/View/FavoriteView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "CD18F8B4-754D-4200-8447-3852187AE46F - a4786e6078a7223d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, NewsApp.ActivityIndicator)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUIRefresh):SwiftUI.View.pullToRefresh(isShowing: SwiftUI.Binding&lt;Swift.Bool&gt;, onRefresh: () -&gt; ()) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI._ConditionalContent&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, NewsApp.ActivityIndicator)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUIRefresh):SwiftUI.View.pullToRefresh(isShowing: SwiftUI.Binding&lt;Swift.Bool&gt;, onRefresh: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;&gt; in NewsApp.FavoriteView.body.getter : some"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Favorite/View/FavoriteView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "1940">
+               </Location>
+               <Location
+                  uuid = "CD18F8B4-754D-4200-8447-3852187AE46F - 45f07ed958ce8952"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.Spacer)&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, NewsApp.ActivityIndicator)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUIRefresh):SwiftUI.View.pullToRefresh(isShowing: SwiftUI.Binding&lt;Swift.Bool&gt;, onRefresh: () -&gt; ()) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI._ConditionalContent&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, NewsApp.ActivityIndicator)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUIRefresh):SwiftUI.View.pullToRefresh(isShowing: SwiftUI.Binding&lt;Swift.Bool&gt;, onRefresh: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;&gt; in NewsApp.FavoriteView.body.getter : some"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Favorite/View/FavoriteView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "5649">
+               </Location>
+               <Location
+                  uuid = "CD18F8B4-754D-4200-8447-3852187AE46F - 2079afd86d6b7b5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, NewsApp.ActivityIndicator)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUIRefresh):SwiftUI.View.pullToRefresh(isShowing: SwiftUI.Binding&lt;Swift.Bool&gt;, onRefresh: () -&gt; ()) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI._ConditionalContent&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, NewsApp.ActivityIndicator)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUIRefresh):SwiftUI.View.pullToRefresh(isShowing: SwiftUI.Binding&lt;Swift.Bool&gt;, onRefresh: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;&gt; in NewsApp.FavoriteView.body.getter : some"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Favorite/View/FavoriteView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "274">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1D120750-79D0-4F0A-8CE4-202F53620B90"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Module/Favorite/View/FavoriteView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "1D120750-79D0-4F0A-8CE4-202F53620B90 - 2079afd86d6b7b5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, NewsApp.ActivityIndicator)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUIRefresh):SwiftUI.View.pullToRefresh(isShowing: SwiftUI.Binding&lt;Swift.Bool&gt;, onRefresh: () -&gt; ()) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI._ConditionalContent&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, NewsApp.ActivityIndicator)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUIRefresh):SwiftUI.View.pullToRefresh(isShowing: SwiftUI.Binding&lt;Swift.Bool&gt;, onRefresh: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;&gt; in NewsApp.FavoriteView.body.getter : some"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Favorite/View/FavoriteView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "274">
+               </Location>
+               <Location
+                  uuid = "1D120750-79D0-4F0A-8CE4-202F53620B90 - a6da0575debbf191"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #3 () -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, NewsApp.ActivityIndicator)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUIRefresh):SwiftUI.View.pullToRefresh(isShowing: SwiftUI.Binding&lt;Swift.Bool&gt;, onRefresh: () -&gt; ()) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI._ConditionalContent&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, NewsApp.ActivityIndicator)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUIRefresh):SwiftUI.View.pullToRefresh(isShowing: SwiftUI.Binding&lt;Swift.Bool&gt;, onRefresh: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;&gt; in NewsApp.FavoriteView.body.getter : some"
+                  moduleName = "NewsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wanhar/Documents/learning_ios/clean-architecture-newsapp/NewsApp/Module/Favorite/View/FavoriteView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "70">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73233B31-4DA1-4CFA-98B4-B3B1935A0A61"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsApp/Module/Favorite/View/FavoriteView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
