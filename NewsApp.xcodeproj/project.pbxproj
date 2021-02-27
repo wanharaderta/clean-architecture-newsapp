@@ -17,10 +17,10 @@
 		836A365225DD568300EC863D /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A365125DD568300EC863D /* CustomShape.swift */; };
 		836A365625DD8B8E00EC863D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A365525DD8B8E00EC863D /* ActivityIndicator.swift */; };
 		836E3D9625DF740F00DD9424 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E3D9525DF740F00DD9424 /* AboutPresenter.swift */; };
-		836E839525EA221300956D3D /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 836E839425EA221300956D3D /* Core */; };
 		836E839B25EA22DD00956D3D /* Article in Frameworks */ = {isa = PBXBuildFile; productRef = 836E839A25EA22DD00956D3D /* Article */; };
 		836E83F625EA5EA800956D3D /* NewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E83F525EA5EA800956D3D /* NewsAppTests.swift */; };
 		836E840625EA5EBD00956D3D /* NewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836E840525EA5EBD00956D3D /* NewsAppUITests.swift */; };
+		836E845E25EA9EF100956D3D /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 836E845D25EA9EF100956D3D /* Core */; };
 		8372C48525DC11AF006C2577 /* NewsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372C48425DC11AF006C2577 /* NewsApi.swift */; };
 		8372C4B225DC244C006C2577 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372C4B125DC244C006C2577 /* HomeRouter.swift */; };
 		8379F9FC25DADC1300921BF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8379F9FB25DADC1300921BF4 /* AppDelegate.swift */; };
@@ -102,8 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				836E839525EA221300956D3D /* Core in Frameworks */,
 				836E839B25EA22DD00956D3D /* Article in Frameworks */,
+				836E845E25EA9EF100956D3D /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,8 +392,8 @@
 			);
 			name = NewsApp;
 			packageProductDependencies = (
-				836E839425EA221300956D3D /* Core */,
 				836E839A25EA22DD00956D3D /* Article */,
+				836E845D25EA9EF100956D3D /* Core */,
 			);
 			productName = NewsApp;
 			productReference = 8379F9F825DADC1300921BF4 /* NewsApp.app */;
@@ -405,7 +405,6 @@
 		8379F9F025DADC1300921BF4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = NO;
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
@@ -432,7 +431,7 @@
 			);
 			mainGroup = 8379F9EF25DADC1300921BF4;
 			packageReferences = (
-				836E839325EA221300956D3D /* XCRemoteSwiftPackageReference "ios-starter" */,
+				836E845C25EA9EF100956D3D /* XCRemoteSwiftPackageReference "ios-starter" */,
 			);
 			productRefGroup = 8379F9F925DADC1300921BF4 /* Products */;
 			projectDirPath = "";
@@ -567,7 +566,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPCX9GY2XM;
 				INFOPLIST_FILE = NewsAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,7 +587,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPCX9GY2XM;
 				INFOPLIST_FILE = NewsAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -608,7 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPCX9GY2XM;
 				INFOPLIST_FILE = NewsAppUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -628,7 +627,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPCX9GY2XM;
 				INFOPLIST_FILE = NewsAppUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -693,7 +692,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -748,7 +747,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -768,7 +767,7 @@
 				DEVELOPMENT_TEAM = UPCX9GY2XM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "NewsApp/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -790,7 +789,7 @@
 				DEVELOPMENT_TEAM = UPCX9GY2XM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "NewsApp/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -844,25 +843,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		836E839325EA221300956D3D /* XCRemoteSwiftPackageReference "ios-starter" */ = {
+		836E845C25EA9EF100956D3D /* XCRemoteSwiftPackageReference "ios-starter" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/wanharaderta/ios-starter.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.3;
+				minimumVersion = 1.0.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		836E839425EA221300956D3D /* Core */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 836E839325EA221300956D3D /* XCRemoteSwiftPackageReference "ios-starter" */;
-			productName = Core;
-		};
 		836E839A25EA22DD00956D3D /* Article */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Article;
+		};
+		836E845D25EA9EF100956D3D /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 836E845C25EA9EF100956D3D /* XCRemoteSwiftPackageReference "ios-starter" */;
+			productName = Core;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

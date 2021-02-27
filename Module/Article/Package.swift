@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
   name: "Article",
-  platforms: [.iOS(.v13), .macOS(.v10_15)],
+  platforms: [.iOS(.v14), .macOS(.v10_15)],
   products: [
     // Products define the executables and libraries a package produces, and make them visible to other packages.
     .library(
@@ -13,7 +13,7 @@ let package = Package(
       targets: ["Article"]) ,
   ],
   dependencies: [
-    .package(name: "Core", url: "https://github.com/wanharaderta/ios-starter.git", from: "1.0.3")
+    .package(name: "Core", url: "https://github.com/wanharaderta/ios-starter.git", from: "1.0.5")
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
